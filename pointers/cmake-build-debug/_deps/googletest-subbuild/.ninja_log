@@ -1,0 +1,23 @@
+# ninja log v6
+2	38	7602735085261836	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	89e8ea60ef365815
+2	38	7602735085261836	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	89e8ea60ef365815
+38	1079	7602735095669979	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	a467572241f66aca
+38	1079	7602735095669979	googletest-populate-prefix/src/release-1.12.1.zip	a467572241f66aca
+38	1079	7602735095669979	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	a467572241f66aca
+38	1079	7602735095669979	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.12.1.zip	a467572241f66aca
+1079	1112	7602735096009011	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	489a78fb189c01ae
+1079	1112	7602735096009011	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	489a78fb189c01ae
+1112	1146	7602735096349010	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	1725b82fa2f3559
+1112	1146	7602735096349010	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	1725b82fa2f3559
+1146	1180	7602735096689007	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	639eb8d38b9ea126
+1146	1180	7602735096689007	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	639eb8d38b9ea126
+1180	1215	7602735097039004	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	53d4defcce2d6a15
+1180	1215	7602735097039004	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	53d4defcce2d6a15
+1215	1249	7602735097379008	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	ab915daa59e36d07
+1215	1249	7602735097379008	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	ab915daa59e36d07
+1249	1282	7602735097709005	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	9502e52864f054a2
+1249	1282	7602735097709005	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	9502e52864f054a2
+1283	1329	7602735098179009	CMakeFiles/googletest-populate-complete	1c6f581d2fa350f1
+1283	1329	7602735098179009	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	1c6f581d2fa350f1
+1283	1329	7602735098179009	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	1c6f581d2fa350f1
+1283	1329	7602735098179009	C:/tasks/pointers/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	1c6f581d2fa350f1
