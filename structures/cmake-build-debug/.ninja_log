@@ -2,3 +2,16 @@
 3	342	7602736809307440	CMakeFiles/structures.dir/main.cpp.obj	1d3980c256b5c77f
 7	361	7602736809347442	CMakeFiles/structures.dir/AnyType.cpp.obj	9f93d308b358a9d9
 361	434	7602736812897436	structures.exe	a4361027647313b5
+33	349	7603646739671004	CMakeFiles/structures.dir/main.cpp.obj	1d3980c256b5c77f
+37	383	7603646739710996	CMakeFiles/structures.dir/AnyType.cpp.obj	9f93d308b358a9d9
+383	453	7603646743170998	structures.exe	a4361027647313b5
+23	1151	7603646780924930	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	ad4363710cb8fc15
+27	1338	7603646780964906	CMakeFiles/tests.dir/test.cpp.obj	cb80b4bc613a37aa
+19	5919	7603646780874933	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	fd9b55d416c0fb3b
+5920	7991	7603646839895498	lib/libgtest.a	ff509cfd3161fe06
+7991	8036	7603646860604553	lib/libgtest_main.a	413f1c8401bd34dd
+8036	10391	7603646861054530	tests.exe	832979fa64b70556
+20	1192	7603647522963389	CMakeFiles/tests.dir/test.cpp.obj	cb80b4bc613a37aa
+1192	3541	7603647534685066	tests.exe	832979fa64b70556
+25	1253	7603647934498188	CMakeFiles/tests.dir/test.cpp.obj	cb80b4bc613a37aa
+1254	3650	7603647946778174	tests.exe	832979fa64b70556

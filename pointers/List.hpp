@@ -35,7 +35,6 @@ void stringListDestroy(char*** List) {
     }
 
     free(*List);
-    *List = NULL;
 }
 
 void stringListAdd(char ***List, char *Str) {
@@ -43,9 +42,9 @@ void stringListAdd(char ***List, char *Str) {
     int Size = stringListSize(*List);
 
     (*List)[Size] = Str;
-
     if (Size == Capacity - 1) {
         *List = (char **) realloc(*List, (2 * Capacity) * sizeof(char *));
+
         for (int I = Capacity; I < 2 * Capacity; I++) {
             (*List)[I] = NULL;
         }
@@ -113,9 +112,7 @@ void stringListReplaceInStrings(char** List, char* Before, char* After) {
             int Index = Sub - List[I];
 
             char* NewStr = (char*)malloc(strlen(List[I]) - strlen(Before) + strlen(After) + 1);
-            if (NewStr == NULL) {
-                continue;
-            }
+
             strncpy(NewStr, List[I], Index);
             strcpy(NewStr + Index, After);
             strcpy(NewStr + Index + strlen(After), List[I] + Index + strlen(Before));
@@ -135,14 +132,6 @@ int comparator(const void* A, const void* B) {
 void stringListSort(char** List) {
     int Size = stringListSize(List);
     qsort(List, Size, sizeof(char*), comparator);
-}
-
-void printList(char** List) {
-    int Size = stringListSize(List);
-
-    for(int I = 0; I < Size; I++) {
-        std::cout << List[I] << std::endl;
-    }
 }
 
 #endif //LIST_HPP

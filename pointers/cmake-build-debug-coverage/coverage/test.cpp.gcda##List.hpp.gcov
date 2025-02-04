@@ -1,0 +1,296 @@
+        -:    0:Source:C:/tasks/pointers/List.hpp
+        -:    0:Graph:C:\tasks\pointers\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcno
+        -:    0:Data:C:\tasks\pointers\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LIST_HPP
+        -:    2:#define LIST_HPP
+        -:    3:
+function _Z14stringListSizePPc called 86 returned 100% blocks executed 100%
+       86:    4:int stringListSize(char** List) {
+       86:    5:    int Result = 0;
+        -:    6:
+      281:    7:    while (List[Result] != NULL) {
+       86:    7-block  0
+      281:    7-block  1
+branch  0 taken 195
+branch  1 taken 86 (fallthrough)
+      195:    8:        Result++;
+      195:    8-block  0
+        -:    9:    }
+        -:   10:
+       86:   11:    return Result;
+       86:   11-block  0
+        -:   12:}
+        -:   13:
+function _Z18stringListCapacityPPc called 47 returned 100% blocks executed 100%
+       47:   14:int stringListCapacity(char** List) {
+       47:   15:    int Result = 0;
+        -:   16:
+      149:   17:    while (List[Result] != NULL) Result++;
+       47:   17-block  0
+      102:   17-block  1
+      149:   17-block  2
+branch  0 taken 102
+branch  1 taken 47 (fallthrough)
+      237:   18:    while(List[Result] == NULL) Result++;
+       47:   18-block  0
+      190:   18-block  1
+      237:   18-block  2
+branch  0 taken 190
+branch  1 taken 47 (fallthrough)
+        -:   19:
+       47:   20:    return Result;
+       47:   20-block  0
+        -:   21:}
+        -:   22:
+function _Z14stringListInitPPPc called 14 returned 100% blocks executed 100%
+       14:   23:void stringListInit(char*** List) {
+       14:   24:    *List = (char**) malloc(4 * sizeof(char*));
+       70:   25:    for(int I = 0; I < 4; I++) {
+       14:   25-block  0
+       70:   25-block  1
+branch  0 taken 56
+branch  1 taken 14 (fallthrough)
+       56:   26:        (*List)[I] = NULL;
+       56:   26-block  0
+        -:   27:    }
+       14:   28:}
+        -:   29:
+function _Z17stringListDestroyPPPc called 14 returned 100% blocks executed 100%
+       14:   30:void stringListDestroy(char*** List) {
+       14:   31:    int Size = stringListSize(*List);
+       14:   31-block  0
+call    0 returned 14
+        -:   32:
+       48:   33:    for(int I = 0; I < Size; I++) {
+       48:   33-block  0
+branch  0 taken 34
+branch  1 taken 14 (fallthrough)
+       34:   34:        free((*List)[I]);
+       34:   34-block  0
+        -:   35:    }
+        -:   36:
+       14:   37:    free(*List);
+       14:   38:}
+        -:   39:
+function _Z13stringListAddPPPcS_ called 47 returned 100% blocks executed 100%
+       47:   40:void stringListAdd(char ***List, char *Str) {
+       47:   41:    int Capacity = stringListCapacity(*List);
+       47:   41-block  0
+call    0 returned 47
+       47:   42:    int Size = stringListSize(*List);
+call    0 returned 47
+        -:   43:
+       47:   44:    (*List)[Size] = Str;
+       47:   45:    if (Size == Capacity - 1) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 45
+        2:   46:        *List = (char **) realloc(*List, (2 * Capacity) * sizeof(char *));
+        -:   47:
+       17:   48:        for (int I = Capacity; I < 2 * Capacity; I++) {
+        2:   48-block  0
+       17:   48-block  1
+branch  0 taken 15
+branch  1 taken 2 (fallthrough)
+       15:   49:            (*List)[I] = NULL;
+       15:   49-block  0
+        -:   50:        }
+        -:   51:    }
+        -:   52:
+       47:   53:    (*List)[Size] = strdup(Str);
+       47:   53-block  0
+call    0 returned 47
+       47:   54:    (*List)[Size + 1] = NULL;
+       47:   55:}
+        -:   56:
+function _Z17stringListIndexOfPPcS_ called 2 returned 100% blocks executed 90%
+        2:   57:int stringListIndexOf(char** List, char* Str) {
+        2:   58:    int Size = stringListSize(List);
+        2:   58-block  0
+call    0 returned 2
+        -:   59:
+        7:   60:    for(int I = 0; I < Size; I++) {
+        5:   60-block  0
+        7:   60-block  1
+branch  0 taken 6
+branch  1 taken 1 (fallthrough)
+       6*:   61:        if(List[I] == NULL) continue;
+        6:   61-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 6
+    %%%%%:   61-block  1
+        -:   62:
+        6:   63:        if(strstr(List[I], Str)) return I;
+        6:   63-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 5
+        1:   63-block  1
+        -:   64:    }
+        1:   65:    return -1;
+        1:   65-block  0
+        -:   66:}
+        -:   67:
+function _Z16stringListRemovePPcS_ called 7 returned 100% blocks executed 92%
+        7:   68:void stringListRemove(char** List, char* Str) {
+        7:   69:    int Size = stringListSize(List);
+        7:   69-block  0
+call    0 returned 7
+        -:   70:
+        7:   71:    int Shift = 0;
+        -:   72:
+       27:   73:    for (int I = 0; I < Size; I++) {
+       20:   73-block  0
+       27:   73-block  1
+branch  0 taken 20
+branch  1 taken 7 (fallthrough)
+      20*:   74:        if (List[I] == NULL) continue;
+       20:   74-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 20
+    %%%%%:   74-block  1
+        -:   75:
+       20:   76:        if (strcmp(List[I], Str) != 0) {
+       20:   76-block  0
+branch  0 taken 7 (fallthrough)
+branch  1 taken 13
+        7:   77:            List[Shift] = List[I];
+        7:   78:            Shift++;
+        7:   78-block  0
+        -:   79:        }
+        -:   80:    }
+        -:   81:
+       20:   82:    for (int I = Shift; I < Size; I++) {
+        7:   82-block  0
+       20:   82-block  1
+branch  0 taken 13
+branch  1 taken 7 (fallthrough)
+       13:   83:        List[I] = NULL;
+       13:   83-block  0
+        -:   84:    }
+        7:   85:}
+        -:   86:
+function _Z26stringListRemoveDuplicatesPPc called 5 returned 100% blocks executed 100%
+        5:   87:void stringListRemoveDuplicates(char** List) {
+        5:   88:    int Size = stringListSize(List);
+        5:   88-block  0
+call    0 returned 5
+        -:   89:
+       22:   90:    for (int I = 0; I < Size; I++) {
+       17:   90-block  0
+       22:   90-block  1
+branch  0 taken 17
+branch  1 taken 5 (fallthrough)
+       17:   91:        if (List[I] == NULL) continue;
+       17:   91-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 8
+        9:   91-block  1
+        -:   92:
+       27:   93:        for (int J = I + 1; J < Size; J++) {
+        8:   93-block  0
+       19:   93-block  1
+       27:   93-block  2
+branch  0 taken 19
+branch  1 taken 8 (fallthrough)
+       19:   94:            if (List[J] != NULL && strcmp(List[I], List[J]) == 0) {
+       19:   94-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 9
+       10:   94-block  1
+branch  2 taken 5 (fallthrough)
+branch  3 taken 5
+        5:   95:                stringListRemove(List, List[J]);
+        5:   95-block  0
+call    0 returned 5
+        5:   96:                J--;
+        -:   97:            }
+        -:   98:        }
+        -:   99:    }
+        5:  100:}
+        -:  101:
+function _Z26stringListReplaceInStringsPPcS_S_ called 1 returned 100% blocks executed 73%
+        1:  102:void stringListReplaceInStrings(char** List, char* Before, char* After) {
+        1:  103:    int Size = stringListSize(List);
+        1:  103-block  0
+call    0 returned 1
+        -:  104:
+       1*:  105:    if((Before || After) == NULL) return;
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  105-block  0
+branch  2 never executed (fallthrough)
+branch  3 never executed
+        1:  105-block  1
+    %%%%%:  105-block  2
+        1:  105-block  3
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  105-block  4
+        -:  106:
+        4:  107:    for (int I = 0; I < Size; I++) {
+        1:  107-block  0
+        3:  107-block  1
+        4:  107-block  2
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+       3*:  108:        if (List[I] == NULL) continue;
+        3:  108-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    %%%%%:  108-block  1
+        -:  109:
+        3:  110:        char* Sub = strstr(List[I], Before);
+        3:  111:        if(Sub != NULL) {
+        3:  111-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:  112:            int Index = Sub - List[I];
+        -:  113:
+        3:  114:            char* NewStr = (char*)malloc(strlen(List[I]) - strlen(Before) + strlen(After) + 1);
+        -:  115:
+        3:  116:            strncpy(NewStr, List[I], Index);
+        3:  117:            strcpy(NewStr + Index, After);
+        3:  118:            strcpy(NewStr + Index + strlen(After), List[I] + Index + strlen(Before));
+        -:  119:
+        3:  120:            List[I] = NewStr;
+        3:  120-block  0
+        -:  121:        }
+        -:  122:    }
+        -:  123:}
+        -:  124:
+function _Z10comparatorPKvS0_ called 3 returned 100% blocks executed 64%
+        3:  125:int comparator(const void* A, const void* B) {
+        3:  126:    char* Fir = *(char**)A;
+        3:  127:    char* Sec = *(char**)B;
+       3*:  128:    if (Fir == NULL && Sec == NULL) return 0;
+        3:  128-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    %%%%%:  128-block  1
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    %%%%%:  128-block  2
+       3*:  129:    return (Fir == NULL ? 1 : (Sec == NULL ? -1 : *Fir - *Sec));
+        3:  129-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:  129-block  1
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0
+        3:  129-block  2
+    %%%%%:  129-block  3
+        3:  129-block  4
+    %%%%%:  129-block  5
+        3:  129-block  6
+        -:  130:}
+        -:  131:
+function _Z14stringListSortPPc called 1 returned 100% blocks executed 100%
+        1:  132:void stringListSort(char** List) {
+        1:  133:    int Size = stringListSize(List);
+        1:  133-block  0
+call    0 returned 1
+        1:  134:    qsort(List, Size, sizeof(char*), comparator);
+call    0 returned 1
+        1:  135:}
+        -:  136:
+        -:  137:#endif //LIST_HPP

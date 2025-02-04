@@ -12,6 +12,25 @@ TEST(StringList, SizeDefault) {
     stringListDestroy(&List);
 }
 
+TEST(StringList, SizeRealloc) {
+    char **List = NULL;
+    stringListInit(&List);
+    stringListAdd(&List, "string1");
+    stringListAdd(&List, "string2");
+    stringListAdd(&List, "string1");
+    stringListAdd(&List, "string2");
+    stringListAdd(&List, "string1");
+    stringListAdd(&List, "string2");
+    stringListAdd(&List, "string1");
+    stringListAdd(&List, "string2");
+    stringListAdd(&List, "string1");
+    stringListAdd(&List, "string2");
+    stringListAdd(&List, "string1");
+    stringListAdd(&List, "string2");
+    EXPECT_STREQ(List[11], "string2");
+    stringListDestroy(&List);
+}
+
 TEST(StringList, SizeEmpty) {
     char **List = NULL;
     stringListInit(&List);
@@ -118,6 +137,7 @@ TEST(StringList, DuplicateRealloc) {
     stringListAdd(&List, "string3");
     stringListAdd(&List, "string2");
 
+
     stringListRemoveDuplicates(List);
     EXPECT_EQ(stringListSize(List), 1);
     EXPECT_STREQ(List[0], "string3");
@@ -151,6 +171,23 @@ TEST(StringList, ReplaceIn) {
     stringListReplaceInStrings(List, "string", "s");
 
     EXPECT_STREQ(List[0], "s2");
+
+    stringListDestroy(&List);
+}
+
+TEST(StringList, Sort) {
+    char **List = NULL;
+    stringListInit(&List);
+
+    stringListAdd(&List, "3");
+    stringListAdd(&List, "2");
+    stringListAdd(&List, "1");
+
+    stringListSort(List);
+
+    EXPECT_STREQ(List[0], "1");
+    EXPECT_STREQ(List[1], "2");
+    EXPECT_STREQ(List[2], "3");
 
     stringListDestroy(&List);
 }

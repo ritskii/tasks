@@ -1,0 +1,343 @@
+        -:    0:Source:C:/tasks/structures/AnyType.cpp
+        -:    0:Graph:C:\tasks\structures\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcno
+        -:    0:Data:C:\tasks\structures\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "AnyType.hpp"
+        -:    2:
+function _ZNK7AnyType9getTypeIDEv called 73 returned 100% blocks executed 95%
+       73:    3:AnyType::TypeID AnyType::getTypeID() const {
+       73:    4:    if (Type == typeid(void)) return VOID;
+       73:    4-block  0
+call    0 returned 73
+call    1 returned 73
+branch  2 taken 12 (fallthrough)
+branch  3 taken 61
+       12:    4-block  1
+       61:    5:    if (Type == typeid(int)) return INT;
+       61:    5-block  0
+call    0 returned 61
+call    1 returned 61
+branch  2 taken 15 (fallthrough)
+branch  3 taken 46
+       15:    5-block  1
+       46:    6:    if (Type == typeid(double)) return DOUBLE;
+       46:    6-block  0
+call    0 returned 46
+call    1 returned 46
+branch  2 taken 17 (fallthrough)
+branch  3 taken 29
+       17:    6-block  1
+       29:    7:    if (Type == typeid(char)) return CHAR;
+       29:    7-block  0
+call    0 returned 29
+call    1 returned 29
+branch  2 taken 15 (fallthrough)
+branch  3 taken 14
+       15:    7-block  1
+       14:    8:    if (Type == typeid(bool)) return BOOL;
+       14:    8-block  0
+call    0 returned 14
+call    1 returned 14
+branch  2 taken 14 (fallthrough)
+branch  3 taken 0
+       14:    8-block  1
+        -:    9:}
+        -:   10:
+function _ZN7AnyTypeC2Ei called 9 returned 100% blocks executed 100%
+        9:   11:AnyType::AnyType(int Input) : Type(typeid(int)) {
+        9:   11-block  0
+call    0 returned 9
+        9:   12:    Value = new int(Input);
+call    0 returned 9
+        9:   13:}
+        -:   14:
+function _ZN7AnyTypeC2Ed called 9 returned 100% blocks executed 100%
+        9:   15:AnyType::AnyType(double Input) : Type(typeid(double)) {
+        9:   15-block  0
+call    0 returned 9
+        9:   16:    Value = new double(Input);
+call    0 returned 9
+        9:   17:}
+        -:   18:
+function _ZN7AnyTypeC2Ec called 7 returned 100% blocks executed 100%
+        7:   19:AnyType::AnyType(char Input) : Type(typeid(char)) {
+        7:   19-block  0
+call    0 returned 7
+        7:   20:    Value = new char(Input);
+call    0 returned 7
+        7:   21:}
+        -:   22:
+function _ZN7AnyTypeC2Eb called 6 returned 100% blocks executed 100%
+        6:   23:AnyType::AnyType(bool Input) : Type(typeid(bool)) {
+        6:   23-block  0
+call    0 returned 6
+        6:   24:    Value = new bool(Input);
+call    0 returned 6
+        6:   25:}
+        -:   26:
+function _ZN7AnyTypeC2EOS_ called 4 returned 100% blocks executed 100%
+        4:   27:AnyType::AnyType(AnyType&& Oth) : Type(Oth.Type) {
+        4:   28:    switch (Oth.getTypeID()) {
+        4:   28-block  0
+call    0 returned 4
+branch  1 taken 1
+branch  2 taken 1
+branch  3 taken 1
+branch  4 taken 1
+branch  5 taken 0
+        1:   29:        case INT:
+        1:   30:            Value = new int(*(static_cast<int*>(Oth.Value)));
+        1:   30-block  0
+call    0 returned 1
+        1:   31:        break;
+        1:   32:        case DOUBLE:
+        1:   33:            Value = new double(*(static_cast<double*>(Oth.Value)));
+        1:   33-block  0
+call    0 returned 1
+        1:   34:        break;
+        1:   35:        case CHAR:
+        1:   36:            Value = new char(*(static_cast<char*>(Oth.Value)));
+        1:   36-block  0
+call    0 returned 1
+        1:   37:        break;
+        1:   38:        case BOOL:
+        1:   39:            Value = new bool(*(static_cast<bool*>(Oth.Value)));
+        1:   39-block  0
+call    0 returned 1
+        1:   40:        break;
+        -:   41:    }
+        4:   42:    Oth.destroy();
+        4:   42-block  0
+call    0 returned 4
+        4:   43:}
+        -:   44:
+function _ZN7AnyTypeC2ERKS_ called 4 returned 100% blocks executed 100%
+        4:   45:AnyType::AnyType(const AnyType& Oth) : Type(Oth.Type) {
+        4:   46:    switch (Oth.getTypeID()) {
+        4:   46-block  0
+call    0 returned 4
+branch  1 taken 1
+branch  2 taken 1
+branch  3 taken 1
+branch  4 taken 1
+branch  5 taken 0
+        1:   47:        case INT:
+        1:   48:            Value = new int(*(static_cast<int*>(Oth.Value)));
+        1:   48-block  0
+call    0 returned 1
+        1:   49:            break;
+        1:   50:        case DOUBLE:
+        1:   51:            Value = new double(*(static_cast<double*>(Oth.Value)));
+        1:   51-block  0
+call    0 returned 1
+        1:   52:            break;
+        1:   53:        case CHAR:
+        1:   54:            Value = new char(*(static_cast<char*>(Oth.Value)));
+        1:   54-block  0
+call    0 returned 1
+        1:   55:            break;
+        1:   56:        case BOOL:
+        1:   57:            Value = new bool(*(static_cast<bool*>(Oth.Value)));
+        1:   57-block  0
+call    0 returned 1
+        1:   58:            break;
+        -:   59:    }
+        4:   60:}
+        -:   61:
+function _ZN7AnyTypeaSERKS_ called 8 returned 100% blocks executed 100%
+        8:   62:AnyType& AnyType::operator=(const AnyType& Oth) {
+        8:   63:    if (this != &Oth) {
+        8:   63-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+        8:   64:        destroy();
+        8:   64-block  0
+call    0 returned 8
+        8:   65:        Type = Oth.Type;
+        8:   66:        switch (Oth.getTypeID()) {
+call    0 returned 8
+branch  1 taken 1
+branch  2 taken 2
+branch  3 taken 2
+branch  4 taken 2
+branch  5 taken 1
+        1:   67:            case INT:
+        1:   68:                Value = new int(*(static_cast<int*>(Oth.Value)));
+        1:   68-block  0
+call    0 returned 1
+        1:   69:                break;
+        2:   70:            case DOUBLE:
+        2:   71:                Value = new double(*(static_cast<double*>(Oth.Value)));
+        2:   71-block  0
+call    0 returned 2
+        2:   72:                break;
+        2:   73:            case CHAR:
+        2:   74:                Value = new char(*(static_cast<char*>(Oth.Value)));
+        2:   74-block  0
+call    0 returned 2
+        2:   75:                break;
+        2:   76:            case BOOL:
+        2:   77:                Value = new bool(*(static_cast<bool*>(Oth.Value)));
+        2:   77-block  0
+call    0 returned 2
+        2:   78:                break;
+        -:   79:        }
+        -:   80:    }
+        8:   81:    return *this;
+        8:   81-block  0
+        -:   82:}
+        -:   83:
+function _ZN7AnyTypeaSEOS_ called 3 returned 100% blocks executed 100%
+        3:   84:AnyType& AnyType::operator=(AnyType&& Oth) {
+        3:   85:    if (this != &Oth) {
+        3:   85-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   86:        destroy();
+        3:   86-block  0
+call    0 returned 3
+        3:   87:        Type = Oth.Type;
+        3:   88:        Oth.Type = typeid(void);
+call    0 returned 3
+        3:   89:        std::swap(Value, Oth.Value);
+call    0 returned 3
+        -:   90:    }
+        3:   91:    return *this;
+        3:   91-block  0
+        -:   92:}
+        -:   93:
+function _ZN7AnyType4swapERS_ called 1 returned 100% blocks executed 100%
+        1:   94:void AnyType::swap(AnyType& Oth) {
+        1:   95:    std::swap(Value, Oth.Value);
+        1:   95-block  0
+call    0 returned 1
+        1:   96:    std::swap(Type, Oth.Type);
+call    0 returned 1
+        1:   97:}
+        -:   98:
+function _ZN7AnyType7destroyEv called 56 returned 100% blocks executed 100%
+       56:   99:void AnyType::destroy() {
+       56:  100:    switch (getTypeID()) {
+       56:  100-block  0
+call    0 returned 56
+branch  1 taken 12
+branch  2 taken 13
+branch  3 taken 11
+branch  4 taken 10
+branch  5 taken 10
+       12:  101:        case INT:
+       12:  102:            delete static_cast<int*>(Value);
+       12:  102-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 0
+       12:  102-block  1
+call    2 returned 12
+       12:  103:            break;
+       12:  103-block  0
+       13:  104:        case DOUBLE:
+       13:  105:            delete static_cast<double*>(Value);
+       13:  105-block  0
+branch  0 taken 13 (fallthrough)
+branch  1 taken 0
+       13:  105-block  1
+call    2 returned 13
+       13:  106:            break;
+       13:  106-block  0
+       11:  107:        case CHAR:
+       11:  108:            delete static_cast<char*>(Value);
+       11:  108-block  0
+branch  0 taken 11 (fallthrough)
+branch  1 taken 0
+       11:  108-block  1
+call    2 returned 11
+       11:  109:            break;
+       11:  109-block  0
+       10:  110:        case BOOL:
+       10:  111:            delete static_cast<bool*>(Value);
+       10:  111-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 0
+       10:  111-block  1
+call    2 returned 10
+       10:  112:            break;
+       10:  112-block  0
+       10:  113:        default:
+       10:  114:            break;
+       10:  114-block  0
+        -:  115:    }
+       56:  116:    Value = nullptr;
+       56:  117:    Type = typeid(void);
+       56:  117-block  0
+call    0 returned 56
+       56:  118:}
+        -:  119:
+function _ZN7AnyType5toIntEv called 5 returned 80% blocks executed 100%
+        5:  120:int AnyType::toInt() {
+        5:  121:    if (Type != typeid(int)) throw std::bad_cast();
+        5:  121-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 1 (fallthrough)
+branch  3 taken 4
+        1:  121-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 0
+        4:  122:    return *(static_cast<int*>(Value));
+        4:  122-block  0
+        -:  123:}
+        -:  124:
+function _ZN7AnyType8toDoubleEv called 4 returned 75% blocks executed 100%
+        4:  125:double AnyType::toDouble() {
+        4:  126:    if (Type != typeid(double)) throw std::bad_cast();
+        4:  126-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 1 (fallthrough)
+branch  3 taken 3
+        1:  126-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 0
+        3:  127:    return *(static_cast<double*>(Value));
+        3:  127-block  0
+        -:  128:}
+        -:  129:
+function _ZN7AnyType6toCharEv called 3 returned 100% blocks executed 62%
+        3:  130:char AnyType::toChar() {
+       3*:  131:    if (Type != typeid(char)) throw std::bad_cast();
+        3:  131-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 0 (fallthrough)
+branch  3 taken 3
+    %%%%%:  131-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        3:  132:    return *(static_cast<char*>(Value));
+        3:  132-block  0
+        -:  133:}
+        -:  134:
+function _ZN7AnyType6toBoolEv called 1 returned 100% blocks executed 62%
+        1:  135:bool AnyType::toBool() {
+       1*:  136:    if (Type != typeid(bool)) throw std::bad_cast();
+        1:  136-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  136-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+        1:  137:    return *(static_cast<bool*>(Value));
+        1:  137-block  0
+        -:  138:}
+        -:  139:
+function _ZN7AnyTypeD2Ev called 41 returned 100% blocks executed 100%
+       41:  140:AnyType::~AnyType() {
+       41:  141:    destroy();
+       41:  141-block  0
+call    0 returned 41
+       41:  142:}

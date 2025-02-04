@@ -1,0 +1,1565 @@
+        -:    0:Source:C:/tasks/pointers/test.cpp
+        -:    0:Graph:C:\tasks\pointers\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcno
+        -:    0:Data:C:\tasks\pointers\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "gtest/gtest.h"
+        -:    2:#include "List.hpp"
+        -:    3:
+        4:    4:TEST(StringList, SizeDefault) {
+        1:    5:    char **List = NULL;
+        1:    6:    stringListInit(&List);
+        -:    7:
+        1:    8:    stringListAdd(&List, "string1");
+        1:    9:    stringListAdd(&List, "string2");
+        -:   10:
+       1*:   11:    EXPECT_EQ(stringListSize(List), 2);
+        1:   12:    stringListDestroy(&List);
+        1:   13:}
+------------------
+_ZN27StringList_SizeDefault_TestC1Ev:
+function _ZN27StringList_SizeDefault_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    4:TEST(StringList, SizeDefault) {
+        1:    4-block  0
+call    0 returned 1
+------------------
+_ZN27StringList_SizeDefault_TestD0Ev:
+function _ZN27StringList_SizeDefault_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:    4:TEST(StringList, SizeDefault) {
+        1:    4-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN27StringList_SizeDefault_TestD1Ev:
+function _ZN27StringList_SizeDefault_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:    4:TEST(StringList, SizeDefault) {
+        1:    4-block  0
+call    0 returned 1
+------------------
+_ZN27StringList_SizeDefault_Test8TestBodyEv:
+function _ZN27StringList_SizeDefault_Test8TestBodyEv called 1 returned 100% blocks executed 38%
+        1:    4:TEST(StringList, SizeDefault) {
+        1:    5:    char **List = NULL;
+        1:    6:    stringListInit(&List);
+        1:    6-block  0
+call    0 returned 1
+        -:    7:
+        1:    8:    stringListAdd(&List, "string1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9:    stringListAdd(&List, "string2");
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   10:
+       1*:   11:    EXPECT_EQ(stringListSize(List), 2);
+        1:   11-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   11-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   11-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   11-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   11-block  4
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   11-block  5
+call   17 never executed
+call   18 never executed
+        1:   11-block  6
+call   19 returned 1
+    $$$$$:   11-block  7
+    $$$$$:   11-block  8
+    $$$$$:   11-block  9
+call   20 never executed
+    $$$$$:   11-block 10
+    $$$$$:   11-block 11
+call   21 never executed
+    $$$$$:   11-block 12
+    $$$$$:   11-block 13
+call   22 never executed
+        1:   12:    stringListDestroy(&List);
+call    0 returned 1
+        1:   13:}
+------------------
+        -:   14:
+        4:   15:TEST(StringList, SizeRealloc) {
+        1:   16:    char **List = NULL;
+        1:   17:    stringListInit(&List);
+        1:   18:    stringListAdd(&List, "string1");
+        1:   19:    stringListAdd(&List, "string2");
+        1:   20:    stringListAdd(&List, "string1");
+        1:   21:    stringListAdd(&List, "string2");
+        1:   22:    stringListAdd(&List, "string1");
+        1:   23:    stringListAdd(&List, "string2");
+        1:   24:    stringListAdd(&List, "string1");
+        1:   25:    stringListAdd(&List, "string2");
+        1:   26:    stringListAdd(&List, "string1");
+        1:   27:    stringListAdd(&List, "string2");
+        1:   28:    stringListAdd(&List, "string1");
+        1:   29:    stringListAdd(&List, "string2");
+       1*:   30:    EXPECT_STREQ(List[11], "string2");
+        1:   31:    stringListDestroy(&List);
+        1:   32:}
+------------------
+_ZN27StringList_SizeRealloc_TestC1Ev:
+function _ZN27StringList_SizeRealloc_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(StringList, SizeRealloc) {
+        1:   15-block  0
+call    0 returned 1
+------------------
+_ZN27StringList_SizeRealloc_TestD0Ev:
+function _ZN27StringList_SizeRealloc_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(StringList, SizeRealloc) {
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN27StringList_SizeRealloc_TestD1Ev:
+function _ZN27StringList_SizeRealloc_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(StringList, SizeRealloc) {
+        1:   15-block  0
+call    0 returned 1
+------------------
+_ZN27StringList_SizeRealloc_Test8TestBodyEv:
+function _ZN27StringList_SizeRealloc_Test8TestBodyEv called 1 returned 100% blocks executed 56%
+        1:   15:TEST(StringList, SizeRealloc) {
+        1:   16:    char **List = NULL;
+        1:   17:    stringListInit(&List);
+        1:   17-block  0
+call    0 returned 1
+        1:   18:    stringListAdd(&List, "string1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19:    stringListAdd(&List, "string2");
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20:    stringListAdd(&List, "string1");
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21:    stringListAdd(&List, "string2");
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22:    stringListAdd(&List, "string1");
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23:    stringListAdd(&List, "string2");
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24:    stringListAdd(&List, "string1");
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25:    stringListAdd(&List, "string2");
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26:    stringListAdd(&List, "string1");
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27:    stringListAdd(&List, "string2");
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28:    stringListAdd(&List, "string1");
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29:    stringListAdd(&List, "string2");
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   30:    EXPECT_STREQ(List[11], "string2");
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   30-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   30-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   30-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   30-block  5
+call   16 never executed
+call   17 never executed
+        1:   30-block  6
+call   18 returned 1
+    $$$$$:   30-block  7
+call   19 never executed
+    $$$$$:   30-block  8
+    $$$$$:   30-block  9
+call   20 never executed
+    $$$$$:   30-block 10
+    $$$$$:   30-block 11
+call   21 never executed
+        1:   31:    stringListDestroy(&List);
+call    0 returned 1
+        1:   32:}
+------------------
+        -:   33:
+        4:   34:TEST(StringList, SizeEmpty) {
+        1:   35:    char **List = NULL;
+        1:   36:    stringListInit(&List);
+        -:   37:
+       1*:   38:    EXPECT_EQ(stringListSize(List), 0);
+        1:   39:    stringListDestroy(&List);
+        1:   40:}
+------------------
+_ZN25StringList_SizeEmpty_TestC1Ev:
+function _ZN25StringList_SizeEmpty_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   34:TEST(StringList, SizeEmpty) {
+        1:   34-block  0
+call    0 returned 1
+------------------
+_ZN25StringList_SizeEmpty_TestD0Ev:
+function _ZN25StringList_SizeEmpty_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   34:TEST(StringList, SizeEmpty) {
+        1:   34-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN25StringList_SizeEmpty_TestD1Ev:
+function _ZN25StringList_SizeEmpty_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   34:TEST(StringList, SizeEmpty) {
+        1:   34-block  0
+call    0 returned 1
+------------------
+_ZN25StringList_SizeEmpty_Test8TestBodyEv:
+function _ZN25StringList_SizeEmpty_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:   34:TEST(StringList, SizeEmpty) {
+        1:   35:    char **List = NULL;
+        1:   36:    stringListInit(&List);
+        1:   36-block  0
+call    0 returned 1
+        -:   37:
+       1*:   38:    EXPECT_EQ(stringListSize(List), 0);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   38-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   38-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   38-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   38-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   38-block  4
+call   17 never executed
+call   18 never executed
+        1:   38-block  5
+call   19 returned 1
+    $$$$$:   38-block  6
+    $$$$$:   38-block  7
+    $$$$$:   38-block  8
+call   20 never executed
+    $$$$$:   38-block  9
+    $$$$$:   38-block 10
+call   21 never executed
+    $$$$$:   38-block 11
+    $$$$$:   38-block 12
+call   22 never executed
+        1:   39:    stringListDestroy(&List);
+call    0 returned 1
+        1:   40:}
+------------------
+        -:   41:
+        4:   42:TEST(StringList, IndexDefault) {
+        1:   43:    char **List = NULL;
+        1:   44:    stringListInit(&List);
+        -:   45:
+        1:   46:    stringListAdd(&List, "string1");
+        1:   47:    stringListAdd(&List, "string2");
+        1:   48:    stringListAdd(&List, "string3");
+        -:   49:
+       1*:   50:    EXPECT_EQ(stringListIndexOf(List, "string3"), 2);
+        1:   51:    stringListDestroy(&List);
+        1:   52:}
+------------------
+_ZN28StringList_IndexDefault_TestC1Ev:
+function _ZN28StringList_IndexDefault_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   42:TEST(StringList, IndexDefault) {
+        1:   42-block  0
+call    0 returned 1
+------------------
+_ZN28StringList_IndexDefault_TestD0Ev:
+function _ZN28StringList_IndexDefault_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   42:TEST(StringList, IndexDefault) {
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN28StringList_IndexDefault_TestD1Ev:
+function _ZN28StringList_IndexDefault_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   42:TEST(StringList, IndexDefault) {
+        1:   42-block  0
+call    0 returned 1
+------------------
+_ZN28StringList_IndexDefault_Test8TestBodyEv:
+function _ZN28StringList_IndexDefault_Test8TestBodyEv called 1 returned 100% blocks executed 40%
+        1:   42:TEST(StringList, IndexDefault) {
+        1:   43:    char **List = NULL;
+        1:   44:    stringListInit(&List);
+        1:   44-block  0
+call    0 returned 1
+        -:   45:
+        1:   46:    stringListAdd(&List, "string1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47:    stringListAdd(&List, "string2");
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48:    stringListAdd(&List, "string3");
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   49:
+       1*:   50:    EXPECT_EQ(stringListIndexOf(List, "string3"), 2);
+        1:   50-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   50-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   50-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   50-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   50-block  4
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   50-block  5
+call   17 never executed
+call   18 never executed
+        1:   50-block  6
+call   19 returned 1
+    $$$$$:   50-block  7
+    $$$$$:   50-block  8
+    $$$$$:   50-block  9
+call   20 never executed
+    $$$$$:   50-block 10
+    $$$$$:   50-block 11
+call   21 never executed
+    $$$$$:   50-block 12
+    $$$$$:   50-block 13
+call   22 never executed
+        1:   51:    stringListDestroy(&List);
+call    0 returned 1
+        1:   52:}
+------------------
+        -:   53:
+        4:   54:TEST(StringList, IndexEmpty) {
+        1:   55:    char **List = NULL;
+        1:   56:    stringListInit(&List);
+        -:   57:
+        1:   58:    stringListAdd(&List, "string1");
+        1:   59:    stringListAdd(&List, "string2");
+        1:   60:    stringListAdd(&List, "string3");
+        -:   61:
+       1*:   62:    EXPECT_EQ(stringListIndexOf(List, " "), -1);
+        1:   63:    stringListDestroy(&List);
+        1:   64:}
+------------------
+_ZN26StringList_IndexEmpty_TestC1Ev:
+function _ZN26StringList_IndexEmpty_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   54:TEST(StringList, IndexEmpty) {
+        1:   54-block  0
+call    0 returned 1
+------------------
+_ZN26StringList_IndexEmpty_TestD0Ev:
+function _ZN26StringList_IndexEmpty_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   54:TEST(StringList, IndexEmpty) {
+        1:   54-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN26StringList_IndexEmpty_TestD1Ev:
+function _ZN26StringList_IndexEmpty_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   54:TEST(StringList, IndexEmpty) {
+        1:   54-block  0
+call    0 returned 1
+------------------
+_ZN26StringList_IndexEmpty_Test8TestBodyEv:
+function _ZN26StringList_IndexEmpty_Test8TestBodyEv called 1 returned 100% blocks executed 40%
+        1:   54:TEST(StringList, IndexEmpty) {
+        1:   55:    char **List = NULL;
+        1:   56:    stringListInit(&List);
+        1:   56-block  0
+call    0 returned 1
+        -:   57:
+        1:   58:    stringListAdd(&List, "string1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   59:    stringListAdd(&List, "string2");
+        1:   59-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60:    stringListAdd(&List, "string3");
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   61:
+       1*:   62:    EXPECT_EQ(stringListIndexOf(List, " "), -1);
+        1:   62-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   62-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   62-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   62-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   62-block  4
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   62-block  5
+call   17 never executed
+call   18 never executed
+        1:   62-block  6
+call   19 returned 1
+    $$$$$:   62-block  7
+    $$$$$:   62-block  8
+    $$$$$:   62-block  9
+call   20 never executed
+    $$$$$:   62-block 10
+    $$$$$:   62-block 11
+call   21 never executed
+    $$$$$:   62-block 12
+    $$$$$:   62-block 13
+call   22 never executed
+        1:   63:    stringListDestroy(&List);
+call    0 returned 1
+        1:   64:}
+------------------
+        -:   65:
+        4:   66:TEST(StringList, RemoveEmpty) {
+        1:   67:    char **List = NULL;
+        1:   68:    stringListInit(&List);
+        -:   69:
+        1:   70:    stringListAdd(&List, "string1");
+        1:   71:    stringListAdd(&List, "string2");
+        1:   72:    stringListRemove(List, "");
+       1*:   73:    EXPECT_EQ(stringListSize(List), 2);
+        1:   74:    stringListDestroy(&List);
+        1:   75:}
+------------------
+_ZN27StringList_RemoveEmpty_TestC1Ev:
+function _ZN27StringList_RemoveEmpty_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   66:TEST(StringList, RemoveEmpty) {
+        1:   66-block  0
+call    0 returned 1
+------------------
+_ZN27StringList_RemoveEmpty_TestD0Ev:
+function _ZN27StringList_RemoveEmpty_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   66:TEST(StringList, RemoveEmpty) {
+        1:   66-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN27StringList_RemoveEmpty_TestD1Ev:
+function _ZN27StringList_RemoveEmpty_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   66:TEST(StringList, RemoveEmpty) {
+        1:   66-block  0
+call    0 returned 1
+------------------
+_ZN27StringList_RemoveEmpty_Test8TestBodyEv:
+function _ZN27StringList_RemoveEmpty_Test8TestBodyEv called 1 returned 100% blocks executed 40%
+        1:   66:TEST(StringList, RemoveEmpty) {
+        1:   67:    char **List = NULL;
+        1:   68:    stringListInit(&List);
+        1:   68-block  0
+call    0 returned 1
+        -:   69:
+        1:   70:    stringListAdd(&List, "string1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71:    stringListAdd(&List, "string2");
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72:    stringListRemove(List, "");
+        1:   72-block  0
+call    0 returned 1
+       1*:   73:    EXPECT_EQ(stringListSize(List), 2);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   73-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   73-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   73-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   73-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   73-block  4
+call   17 never executed
+call   18 never executed
+        1:   73-block  5
+call   19 returned 1
+    $$$$$:   73-block  6
+    $$$$$:   73-block  7
+    $$$$$:   73-block  8
+call   20 never executed
+    $$$$$:   73-block  9
+    $$$$$:   73-block 10
+call   21 never executed
+    $$$$$:   73-block 11
+    $$$$$:   73-block 12
+call   22 never executed
+        1:   74:    stringListDestroy(&List);
+call    0 returned 1
+        1:   75:}
+------------------
+        -:   76:
+        4:   77:TEST(StringList, RemoveDefault) {
+        1:   78:    char **List = NULL;
+        1:   79:    stringListInit(&List);
+        -:   80:
+        1:   81:    stringListAdd(&List, "string1");
+        1:   82:    stringListAdd(&List, "string2");
+        1:   83:    stringListRemove(List, "string1");
+       1*:   84:    EXPECT_EQ(stringListSize(List), 1);
+       1*:   85:    EXPECT_STREQ(List[0], "string2");
+        1:   86:    stringListDestroy(&List);
+        1:   87:}
+------------------
+_ZN29StringList_RemoveDefault_TestC1Ev:
+function _ZN29StringList_RemoveDefault_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(StringList, RemoveDefault) {
+        1:   77-block  0
+call    0 returned 1
+------------------
+_ZN29StringList_RemoveDefault_TestD0Ev:
+function _ZN29StringList_RemoveDefault_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(StringList, RemoveDefault) {
+        1:   77-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN29StringList_RemoveDefault_TestD1Ev:
+function _ZN29StringList_RemoveDefault_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(StringList, RemoveDefault) {
+        1:   77-block  0
+call    0 returned 1
+------------------
+_ZN29StringList_RemoveDefault_Test8TestBodyEv:
+function _ZN29StringList_RemoveDefault_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:   77:TEST(StringList, RemoveDefault) {
+        1:   78:    char **List = NULL;
+        1:   79:    stringListInit(&List);
+        1:   79-block  0
+call    0 returned 1
+        -:   80:
+        1:   81:    stringListAdd(&List, "string1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   82:    stringListAdd(&List, "string2");
+        1:   82-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83:    stringListRemove(List, "string1");
+        1:   83-block  0
+call    0 returned 1
+       1*:   84:    EXPECT_EQ(stringListSize(List), 1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   84-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   84-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   84-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   84-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   84-block  4
+call   17 never executed
+call   18 never executed
+        1:   84-block  5
+call   19 returned 1
+    $$$$$:   84-block  6
+    $$$$$:   84-block  7
+    $$$$$:   84-block  8
+call   20 never executed
+    $$$$$:   84-block  9
+    $$$$$:   84-block 10
+call   21 never executed
+    $$$$$:   84-block 11
+    $$$$$:   84-block 12
+call   22 never executed
+       1*:   85:    EXPECT_STREQ(List[0], "string2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   85-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   85-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   85-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   85-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   85-block  4
+call   16 never executed
+call   17 never executed
+        1:   85-block  5
+call   18 returned 1
+    $$$$$:   85-block  6
+call   19 never executed
+    $$$$$:   85-block  7
+    $$$$$:   85-block  8
+call   20 never executed
+    $$$$$:   85-block  9
+    $$$$$:   85-block 10
+call   21 never executed
+        1:   86:    stringListDestroy(&List);
+call    0 returned 1
+        1:   87:}
+------------------
+        -:   88:
+        4:   89:TEST(StringList, DuplicateEmpty) {
+        1:   90:    char **List = NULL;
+        1:   91:    stringListInit(&List);
+        -:   92:
+        1:   93:    stringListAdd(&List, "string1");
+        1:   94:    stringListAdd(&List, "string2");
+        1:   95:    stringListAdd(&List, "string3");
+        -:   96:
+        1:   97:    stringListRemoveDuplicates(List);
+       1*:   98:    EXPECT_EQ(stringListSize(List), 3);
+        -:   99:
+        1:  100:    stringListDestroy(&List);
+        1:  101:}
+------------------
+_ZN30StringList_DuplicateEmpty_TestC1Ev:
+function _ZN30StringList_DuplicateEmpty_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   89:TEST(StringList, DuplicateEmpty) {
+        1:   89-block  0
+call    0 returned 1
+------------------
+_ZN30StringList_DuplicateEmpty_TestD0Ev:
+function _ZN30StringList_DuplicateEmpty_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   89:TEST(StringList, DuplicateEmpty) {
+        1:   89-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN30StringList_DuplicateEmpty_TestD1Ev:
+function _ZN30StringList_DuplicateEmpty_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   89:TEST(StringList, DuplicateEmpty) {
+        1:   89-block  0
+call    0 returned 1
+------------------
+_ZN30StringList_DuplicateEmpty_Test8TestBodyEv:
+function _ZN30StringList_DuplicateEmpty_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+        1:   89:TEST(StringList, DuplicateEmpty) {
+        1:   90:    char **List = NULL;
+        1:   91:    stringListInit(&List);
+        1:   91-block  0
+call    0 returned 1
+        -:   92:
+        1:   93:    stringListAdd(&List, "string1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94:    stringListAdd(&List, "string2");
+        1:   94-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   95:    stringListAdd(&List, "string3");
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   96:
+        1:   97:    stringListRemoveDuplicates(List);
+        1:   97-block  0
+call    0 returned 1
+       1*:   98:    EXPECT_EQ(stringListSize(List), 3);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   98-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   98-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   98-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   98-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   98-block  4
+call   17 never executed
+call   18 never executed
+        1:   98-block  5
+call   19 returned 1
+    $$$$$:   98-block  6
+    $$$$$:   98-block  7
+    $$$$$:   98-block  8
+call   20 never executed
+    $$$$$:   98-block  9
+    $$$$$:   98-block 10
+call   21 never executed
+    $$$$$:   98-block 11
+    $$$$$:   98-block 12
+call   22 never executed
+        -:   99:
+        1:  100:    stringListDestroy(&List);
+call    0 returned 1
+        1:  101:}
+------------------
+        -:  102:
+        4:  103:TEST(StringList, DuplicateDefault) {
+        1:  104:    char **List = NULL;
+        1:  105:    stringListInit(&List);
+        -:  106:
+        1:  107:    stringListAdd(&List, "string1");
+        1:  108:    stringListAdd(&List, "string2");
+        1:  109:    stringListAdd(&List, "string2");
+        -:  110:
+        1:  111:    stringListRemoveDuplicates(List);
+       1*:  112:    EXPECT_EQ(stringListSize(List), 1);
+        -:  113:
+        1:  114:    stringListDestroy(&List);
+        1:  115:}
+------------------
+_ZN32StringList_DuplicateDefault_TestC1Ev:
+function _ZN32StringList_DuplicateDefault_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  103:TEST(StringList, DuplicateDefault) {
+        1:  103-block  0
+call    0 returned 1
+------------------
+_ZN32StringList_DuplicateDefault_TestD0Ev:
+function _ZN32StringList_DuplicateDefault_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  103:TEST(StringList, DuplicateDefault) {
+        1:  103-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN32StringList_DuplicateDefault_TestD1Ev:
+function _ZN32StringList_DuplicateDefault_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  103:TEST(StringList, DuplicateDefault) {
+        1:  103-block  0
+call    0 returned 1
+------------------
+_ZN32StringList_DuplicateDefault_Test8TestBodyEv:
+function _ZN32StringList_DuplicateDefault_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+        1:  103:TEST(StringList, DuplicateDefault) {
+        1:  104:    char **List = NULL;
+        1:  105:    stringListInit(&List);
+        1:  105-block  0
+call    0 returned 1
+        -:  106:
+        1:  107:    stringListAdd(&List, "string1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  108:    stringListAdd(&List, "string2");
+        1:  108-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  109:    stringListAdd(&List, "string2");
+        1:  109-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  110:
+        1:  111:    stringListRemoveDuplicates(List);
+        1:  111-block  0
+call    0 returned 1
+       1*:  112:    EXPECT_EQ(stringListSize(List), 1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  112-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  112-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  112-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  112-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  112-block  4
+call   17 never executed
+call   18 never executed
+        1:  112-block  5
+call   19 returned 1
+    $$$$$:  112-block  6
+    $$$$$:  112-block  7
+    $$$$$:  112-block  8
+call   20 never executed
+    $$$$$:  112-block  9
+    $$$$$:  112-block 10
+call   21 never executed
+    $$$$$:  112-block 11
+    $$$$$:  112-block 12
+call   22 never executed
+        -:  113:
+        1:  114:    stringListDestroy(&List);
+call    0 returned 1
+        1:  115:}
+------------------
+        -:  116:
+        4:  117:TEST(StringList, DuplicateClear) {
+        1:  118:    char **List = NULL;
+        1:  119:    stringListInit(&List);
+        -:  120:
+        1:  121:    stringListAdd(&List, "string2");
+        1:  122:    stringListAdd(&List, "string2");
+        1:  123:    stringListAdd(&List, "string2");
+        -:  124:
+        1:  125:    stringListRemoveDuplicates(List);
+       1*:  126:    EXPECT_EQ(stringListSize(List), 0);
+        -:  127:
+        1:  128:    stringListDestroy(&List);
+        1:  129:}
+------------------
+_ZN30StringList_DuplicateClear_TestC1Ev:
+function _ZN30StringList_DuplicateClear_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  117:TEST(StringList, DuplicateClear) {
+        1:  117-block  0
+call    0 returned 1
+------------------
+_ZN30StringList_DuplicateClear_TestD0Ev:
+function _ZN30StringList_DuplicateClear_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  117:TEST(StringList, DuplicateClear) {
+        1:  117-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN30StringList_DuplicateClear_TestD1Ev:
+function _ZN30StringList_DuplicateClear_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  117:TEST(StringList, DuplicateClear) {
+        1:  117-block  0
+call    0 returned 1
+------------------
+_ZN30StringList_DuplicateClear_Test8TestBodyEv:
+function _ZN30StringList_DuplicateClear_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+        1:  117:TEST(StringList, DuplicateClear) {
+        1:  118:    char **List = NULL;
+        1:  119:    stringListInit(&List);
+        1:  119-block  0
+call    0 returned 1
+        -:  120:
+        1:  121:    stringListAdd(&List, "string2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  122:    stringListAdd(&List, "string2");
+        1:  122-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  123:    stringListAdd(&List, "string2");
+        1:  123-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  124:
+        1:  125:    stringListRemoveDuplicates(List);
+        1:  125-block  0
+call    0 returned 1
+       1*:  126:    EXPECT_EQ(stringListSize(List), 0);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  126-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  126-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  126-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  126-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  126-block  4
+call   17 never executed
+call   18 never executed
+        1:  126-block  5
+call   19 returned 1
+    $$$$$:  126-block  6
+    $$$$$:  126-block  7
+    $$$$$:  126-block  8
+call   20 never executed
+    $$$$$:  126-block  9
+    $$$$$:  126-block 10
+call   21 never executed
+    $$$$$:  126-block 11
+    $$$$$:  126-block 12
+call   22 never executed
+        -:  127:
+        1:  128:    stringListDestroy(&List);
+call    0 returned 1
+        1:  129:}
+------------------
+        -:  130:
+        4:  131:TEST(StringList, DuplicateRealloc) {
+        1:  132:    char **List = NULL;
+        1:  133:    stringListInit(&List);
+        -:  134:
+        1:  135:    stringListAdd(&List, "string2");
+        1:  136:    stringListAdd(&List, "string2");
+        1:  137:    stringListAdd(&List, "string3");
+        1:  138:    stringListAdd(&List, "string2");
+        -:  139:
+        -:  140:
+        1:  141:    stringListRemoveDuplicates(List);
+       1*:  142:    EXPECT_EQ(stringListSize(List), 1);
+       1*:  143:    EXPECT_STREQ(List[0], "string3");
+        -:  144:
+        1:  145:    stringListDestroy(&List);
+        1:  146:}
+------------------
+_ZN32StringList_DuplicateRealloc_TestC1Ev:
+function _ZN32StringList_DuplicateRealloc_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  131:TEST(StringList, DuplicateRealloc) {
+        1:  131-block  0
+call    0 returned 1
+------------------
+_ZN32StringList_DuplicateRealloc_TestD0Ev:
+function _ZN32StringList_DuplicateRealloc_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  131:TEST(StringList, DuplicateRealloc) {
+        1:  131-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN32StringList_DuplicateRealloc_TestD1Ev:
+function _ZN32StringList_DuplicateRealloc_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  131:TEST(StringList, DuplicateRealloc) {
+        1:  131-block  0
+call    0 returned 1
+------------------
+_ZN32StringList_DuplicateRealloc_Test8TestBodyEv:
+function _ZN32StringList_DuplicateRealloc_Test8TestBodyEv called 1 returned 100% blocks executed 35%
+        1:  131:TEST(StringList, DuplicateRealloc) {
+        1:  132:    char **List = NULL;
+        1:  133:    stringListInit(&List);
+        1:  133-block  0
+call    0 returned 1
+        -:  134:
+        1:  135:    stringListAdd(&List, "string2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  136:    stringListAdd(&List, "string2");
+        1:  136-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  137:    stringListAdd(&List, "string3");
+        1:  137-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  138:    stringListAdd(&List, "string2");
+        1:  138-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  139:
+        -:  140:
+        1:  141:    stringListRemoveDuplicates(List);
+        1:  141-block  0
+call    0 returned 1
+       1*:  142:    EXPECT_EQ(stringListSize(List), 1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  142-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  142-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  142-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  142-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  142-block  4
+call   17 never executed
+call   18 never executed
+        1:  142-block  5
+call   19 returned 1
+    $$$$$:  142-block  6
+    $$$$$:  142-block  7
+    $$$$$:  142-block  8
+call   20 never executed
+    $$$$$:  142-block  9
+    $$$$$:  142-block 10
+call   21 never executed
+    $$$$$:  142-block 11
+    $$$$$:  142-block 12
+call   22 never executed
+       1*:  143:    EXPECT_STREQ(List[0], "string3");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  143-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  143-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  143-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  143-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  143-block  4
+call   16 never executed
+call   17 never executed
+        1:  143-block  5
+call   18 returned 1
+    $$$$$:  143-block  6
+call   19 never executed
+    $$$$$:  143-block  7
+    $$$$$:  143-block  8
+call   20 never executed
+    $$$$$:  143-block  9
+    $$$$$:  143-block 10
+call   21 never executed
+        -:  144:
+        1:  145:    stringListDestroy(&List);
+call    0 returned 1
+        1:  146:}
+------------------
+        -:  147:
+        4:  148:TEST(StringList, DuplicateDouble) {
+        1:  149:    char **List = NULL;
+        1:  150:    stringListInit(&List);
+        -:  151:
+        1:  152:    stringListAdd(&List, "string2");
+        1:  153:    stringListAdd(&List, "string2");
+        1:  154:    stringListAdd(&List, "string3");
+        1:  155:    stringListAdd(&List, "string3");
+        -:  156:
+        1:  157:    stringListRemoveDuplicates(List);
+       1*:  158:    EXPECT_EQ(stringListSize(List), 0);
+        -:  159:
+        1:  160:    stringListDestroy(&List);
+        1:  161:}
+------------------
+_ZN31StringList_DuplicateDouble_TestC1Ev:
+function _ZN31StringList_DuplicateDouble_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  148:TEST(StringList, DuplicateDouble) {
+        1:  148-block  0
+call    0 returned 1
+------------------
+_ZN31StringList_DuplicateDouble_TestD0Ev:
+function _ZN31StringList_DuplicateDouble_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  148:TEST(StringList, DuplicateDouble) {
+        1:  148-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN31StringList_DuplicateDouble_TestD1Ev:
+function _ZN31StringList_DuplicateDouble_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  148:TEST(StringList, DuplicateDouble) {
+        1:  148-block  0
+call    0 returned 1
+------------------
+_ZN31StringList_DuplicateDouble_Test8TestBodyEv:
+function _ZN31StringList_DuplicateDouble_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:  148:TEST(StringList, DuplicateDouble) {
+        1:  149:    char **List = NULL;
+        1:  150:    stringListInit(&List);
+        1:  150-block  0
+call    0 returned 1
+        -:  151:
+        1:  152:    stringListAdd(&List, "string2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  153:    stringListAdd(&List, "string2");
+        1:  153-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  154:    stringListAdd(&List, "string3");
+        1:  154-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  155:    stringListAdd(&List, "string3");
+        1:  155-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  156:
+        1:  157:    stringListRemoveDuplicates(List);
+        1:  157-block  0
+call    0 returned 1
+       1*:  158:    EXPECT_EQ(stringListSize(List), 0);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  158-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  158-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  158-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  158-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  158-block  4
+call   17 never executed
+call   18 never executed
+        1:  158-block  5
+call   19 returned 1
+    $$$$$:  158-block  6
+    $$$$$:  158-block  7
+    $$$$$:  158-block  8
+call   20 never executed
+    $$$$$:  158-block  9
+    $$$$$:  158-block 10
+call   21 never executed
+    $$$$$:  158-block 11
+    $$$$$:  158-block 12
+call   22 never executed
+        -:  159:
+        1:  160:    stringListDestroy(&List);
+call    0 returned 1
+        1:  161:}
+------------------
+        -:  162:
+        4:  163:TEST(StringList, ReplaceIn) {
+        1:  164:    char **List = NULL;
+        1:  165:    stringListInit(&List);
+        -:  166:
+        1:  167:    stringListAdd(&List, "string2");
+        1:  168:    stringListAdd(&List, "string2");
+        1:  169:    stringListAdd(&List, "string3");
+        -:  170:
+        1:  171:    stringListReplaceInStrings(List, "string", "s");
+        -:  172:
+       1*:  173:    EXPECT_STREQ(List[0], "s2");
+        -:  174:
+        1:  175:    stringListDestroy(&List);
+        1:  176:}
+------------------
+_ZN25StringList_ReplaceIn_TestC1Ev:
+function _ZN25StringList_ReplaceIn_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  163:TEST(StringList, ReplaceIn) {
+        1:  163-block  0
+call    0 returned 1
+------------------
+_ZN25StringList_ReplaceIn_TestD0Ev:
+function _ZN25StringList_ReplaceIn_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  163:TEST(StringList, ReplaceIn) {
+        1:  163-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN25StringList_ReplaceIn_TestD1Ev:
+function _ZN25StringList_ReplaceIn_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  163:TEST(StringList, ReplaceIn) {
+        1:  163-block  0
+call    0 returned 1
+------------------
+_ZN25StringList_ReplaceIn_Test8TestBodyEv:
+function _ZN25StringList_ReplaceIn_Test8TestBodyEv called 1 returned 100% blocks executed 43%
+        1:  163:TEST(StringList, ReplaceIn) {
+        1:  164:    char **List = NULL;
+        1:  165:    stringListInit(&List);
+        1:  165-block  0
+call    0 returned 1
+        -:  166:
+        1:  167:    stringListAdd(&List, "string2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  168:    stringListAdd(&List, "string2");
+        1:  168-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  169:    stringListAdd(&List, "string3");
+        1:  169-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  170:
+        1:  171:    stringListReplaceInStrings(List, "string", "s");
+        1:  171-block  0
+call    0 returned 1
+        -:  172:
+       1*:  173:    EXPECT_STREQ(List[0], "s2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  173-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  173-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  173-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  173-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  173-block  4
+call   16 never executed
+call   17 never executed
+        1:  173-block  5
+call   18 returned 1
+    $$$$$:  173-block  6
+call   19 never executed
+    $$$$$:  173-block  7
+    $$$$$:  173-block  8
+call   20 never executed
+    $$$$$:  173-block  9
+    $$$$$:  173-block 10
+call   21 never executed
+        -:  174:
+        1:  175:    stringListDestroy(&List);
+call    0 returned 1
+        1:  176:}
+------------------
+        -:  177:
+        4:  178:TEST(StringList, Sort) {
+        1:  179:    char **List = NULL;
+        1:  180:    stringListInit(&List);
+        -:  181:
+        1:  182:    stringListAdd(&List, "3");
+        1:  183:    stringListAdd(&List, "2");
+        1:  184:    stringListAdd(&List, "1");
+        -:  185:
+        1:  186:    stringListSort(List);
+        -:  187:
+       1*:  188:    EXPECT_STREQ(List[0], "1");
+       1*:  189:    EXPECT_STREQ(List[1], "2");
+       1*:  190:    EXPECT_STREQ(List[2], "3");
+        -:  191:
+        1:  192:    stringListDestroy(&List);
+        1:  193:}
+------------------
+_ZN20StringList_Sort_TestC1Ev:
+function _ZN20StringList_Sort_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  178:TEST(StringList, Sort) {
+        1:  178-block  0
+call    0 returned 1
+------------------
+_ZN20StringList_Sort_TestD0Ev:
+function _ZN20StringList_Sort_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  178:TEST(StringList, Sort) {
+        1:  178-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN20StringList_Sort_TestD1Ev:
+function _ZN20StringList_Sort_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  178:TEST(StringList, Sort) {
+        1:  178-block  0
+call    0 returned 1
+------------------
+_ZN20StringList_Sort_Test8TestBodyEv:
+function _ZN20StringList_Sort_Test8TestBodyEv called 1 returned 100% blocks executed 29%
+        1:  178:TEST(StringList, Sort) {
+        1:  179:    char **List = NULL;
+        1:  180:    stringListInit(&List);
+        1:  180-block  0
+call    0 returned 1
+        -:  181:
+        1:  182:    stringListAdd(&List, "3");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  183:    stringListAdd(&List, "2");
+        1:  183-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  184:    stringListAdd(&List, "1");
+        1:  184-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  185:
+        1:  186:    stringListSort(List);
+        1:  186-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  187:
+       1*:  188:    EXPECT_STREQ(List[0], "1");
+        1:  188-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  188-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  188-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  188-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  188-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  188-block  5
+call   16 never executed
+call   17 never executed
+        1:  188-block  6
+call   18 returned 1
+    $$$$$:  188-block  7
+call   19 never executed
+    $$$$$:  188-block  8
+    $$$$$:  188-block  9
+call   20 never executed
+    $$$$$:  188-block 10
+    $$$$$:  188-block 11
+call   21 never executed
+       1*:  189:    EXPECT_STREQ(List[1], "2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  189-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  189-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  189-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  189-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  189-block  4
+call   16 never executed
+call   17 never executed
+        1:  189-block  5
+call   18 returned 1
+    $$$$$:  189-block  6
+call   19 never executed
+    $$$$$:  189-block  7
+    $$$$$:  189-block  8
+call   20 never executed
+    $$$$$:  189-block  9
+    $$$$$:  189-block 10
+call   21 never executed
+       1*:  190:    EXPECT_STREQ(List[2], "3");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  190-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  190-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  190-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  190-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  190-block  4
+call   16 never executed
+call   17 never executed
+        1:  190-block  5
+call   18 returned 1
+    $$$$$:  190-block  6
+call   19 never executed
+    $$$$$:  190-block  7
+    $$$$$:  190-block  8
+call   20 never executed
+    $$$$$:  190-block  9
+    $$$$$:  190-block 10
+call   21 never executed
+        -:  191:
+        1:  192:    stringListDestroy(&List);
+call    0 returned 1
+        1:  193:}
+------------------

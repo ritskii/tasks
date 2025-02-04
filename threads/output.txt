@@ -1,0 +1,6 @@
+Single comment: 179743
+Multi comment: 227638
+Physical line: 1214807
+Blank: 315506
+Total lines: 1937694
+Files: 8455

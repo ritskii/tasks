@@ -1,4 +1,3 @@
-
 #include "AnyType.hpp"
 
 AnyType::TypeID AnyType::getTypeID() const {
@@ -7,14 +6,40 @@ AnyType::TypeID AnyType::getTypeID() const {
     if (Type == typeid(double)) return DOUBLE;
     if (Type == typeid(char)) return CHAR;
     if (Type == typeid(bool)) return BOOL;
-    return VOID;
 }
 
-AnyType::AnyType() : Value(nullptr), Type(typeid(void)) {}
+AnyType::AnyType(int Input) : Type(typeid(int)) {
+    Value = new int(Input);
+}
+
+AnyType::AnyType(double Input) : Type(typeid(double)) {
+    Value = new double(Input);
+}
+
+AnyType::AnyType(char Input) : Type(typeid(char)) {
+    Value = new char(Input);
+}
+
+AnyType::AnyType(bool Input) : Type(typeid(bool)) {
+    Value = new bool(Input);
+}
 
 AnyType::AnyType(AnyType&& Oth) : Type(Oth.Type) {
-    Oth.Type = typeid(void);
-    std::swap(Value, Oth.Value);
+    switch (Oth.getTypeID()) {
+        case INT:
+            Value = new int(*(static_cast<int*>(Oth.Value)));
+        break;
+        case DOUBLE:
+            Value = new double(*(static_cast<double*>(Oth.Value)));
+        break;
+        case CHAR:
+            Value = new char(*(static_cast<char*>(Oth.Value)));
+        break;
+        case BOOL:
+            Value = new bool(*(static_cast<bool*>(Oth.Value)));
+        break;
+    }
+    Oth.destroy();
 }
 
 AnyType::AnyType(const AnyType& Oth) : Type(Oth.Type) {
@@ -31,8 +56,6 @@ AnyType::AnyType(const AnyType& Oth) : Type(Oth.Type) {
         case BOOL:
             Value = new bool(*(static_cast<bool*>(Oth.Value)));
             break;
-        default:
-            Value = nullptr;
     }
 }
 
@@ -53,8 +76,6 @@ AnyType& AnyType::operator=(const AnyType& Oth) {
             case BOOL:
                 Value = new bool(*(static_cast<bool*>(Oth.Value)));
                 break;
-            default:
-                Value = nullptr;
         }
     }
     return *this;
@@ -73,26 +94,6 @@ AnyType& AnyType::operator=(AnyType&& Oth) {
 void AnyType::swap(AnyType& Oth) {
     std::swap(Value, Oth.Value);
     std::swap(Type, Oth.Type);
-}
-
-void AnyType::print() {
-    switch (getTypeID()) {
-        case VOID:
-            std::cout << Type.name() << "\n";
-            break;
-        case INT:
-            std::cout << Type.name()  << " " << *(static_cast<int*>(Value)) << std::endl;
-            break;
-        case DOUBLE:
-            std::cout << Type.name() << " " << *(static_cast<double*>(Value)) << std::endl;
-            break;
-        case CHAR:
-            std::cout << Type.name() << " " << *(static_cast<char*>(Value)) << std::endl;
-            break;
-        case BOOL:
-            std::cout << Type.name() << " " << (*(static_cast<bool*>(Value)) ? "true" : "false") << std::endl;
-            break;
-    }
 }
 
 void AnyType::destroy() {

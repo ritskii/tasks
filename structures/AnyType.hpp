@@ -13,12 +13,14 @@ struct AnyType {
 
     TypeID getTypeID() const;
 
-    AnyType();
+    AnyType() : Type(typeid(void)) {};
+    AnyType(void* Input) = delete;
+    AnyType(std::nullptr_t Input) = delete;
 
-    template<typename T>
-    AnyType(T Input) : Type(typeid(T)) {
-        Value = new T(Input);
-    }
+    AnyType(int Input);
+    AnyType(double Input);
+    AnyType(char Input);
+    AnyType(bool Input);
 
     AnyType(const AnyType& Oth);
     AnyType(AnyType&& Oth);
@@ -26,7 +28,6 @@ struct AnyType {
     AnyType& operator=(AnyType&& Oth);
 
     void swap(AnyType& Oth);
-    void print();
     void destroy();
 
     int toInt();
@@ -35,6 +36,26 @@ struct AnyType {
     bool toBool();
 
     ~AnyType();
+
+    void print() {
+        switch (getTypeID()) {
+            case VOID:
+                std::cout << Type.name() << "\n";
+            break;
+            case INT:
+                std::cout << Type.name()  << " " << *(static_cast<int*>(Value)) << std::endl;
+            break;
+            case DOUBLE:
+                std::cout << Type.name() << " " << *(static_cast<double*>(Value)) << std::endl;
+            break;
+            case CHAR:
+                std::cout << Type.name() << " " << *(static_cast<char*>(Value)) << std::endl;
+            break;
+            case BOOL:
+                std::cout << Type.name() << " " << (*(static_cast<bool*>(Value)) ? "true" : "false") << std::endl;
+            break;
+        }
+    }
 };
 
 #endif // ANYTYPE_HPP

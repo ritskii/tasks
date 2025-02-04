@@ -12,6 +12,6 @@
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Found Python: C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0/python3.12.exe (found version "3.12.8") found components: Interpreter 
--- Configuring done (4.5s)
+-- Configuring done (4.8s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/tasks/pointers/cmake-build-debug

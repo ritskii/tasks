@@ -1,0 +1,2187 @@
+        -:    0:Source:C:/tasks/structures/test.cpp
+        -:    0:Graph:C:\tasks\structures\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcno
+        -:    0:Data:C:\tasks\structures\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "AnyType.cpp"
+        -:    2:#include "gtest/gtest.h"
+        -:    3:
+        4:    4:TEST(Constructor, Default) {
+        1:    5:    AnyType I = 2;
+        1:    6:    AnyType D = 2.5;
+        1:    7:    AnyType C = 'C';
+        -:    8:
+        1:    9:    int Integer = I.toInt();
+        1:   10:    double Double = D.toDouble();
+        1:   11:    char Character = C.toChar();
+        -:   12:
+       1*:   13:    EXPECT_EQ(Integer, 2);
+       1*:   14:    EXPECT_EQ(Double, 2.5);
+       1*:   15:    EXPECT_EQ(Character, 'C');
+        1:   16:}
+------------------
+_ZN24Constructor_Default_TestC1Ev:
+function _ZN24Constructor_Default_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    4:TEST(Constructor, Default) {
+        1:    4-block  0
+call    0 returned 1
+------------------
+_ZN24Constructor_Default_TestD0Ev:
+function _ZN24Constructor_Default_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:    4:TEST(Constructor, Default) {
+        1:    4-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN24Constructor_Default_TestD1Ev:
+function _ZN24Constructor_Default_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:    4:TEST(Constructor, Default) {
+        1:    4-block  0
+call    0 returned 1
+------------------
+_ZN24Constructor_Default_Test8TestBodyEv:
+function _ZN24Constructor_Default_Test8TestBodyEv called 1 returned 100% blocks executed 29%
+        1:    4:TEST(Constructor, Default) {
+        1:    5:    AnyType I = 2;
+        1:    5-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    6:    AnyType D = 2.5;
+        1:    6-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    7:    AnyType C = 'C';
+        1:    7-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:    8:
+        1:    9:    int Integer = I.toInt();
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    double Double = D.toDouble();
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:    char Character = C.toChar();
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   12:
+       1*:   13:    EXPECT_EQ(Integer, 2);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   13-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   13-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   13-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   13-block  5
+call   16 never executed
+call   17 never executed
+        1:   13-block  6
+call   18 returned 1
+    $$$$$:   13-block  7
+    $$$$$:   13-block  8
+call   19 never executed
+    $$$$$:   13-block  9
+    $$$$$:   13-block 10
+call   20 never executed
+    $$$$$:   13-block 11
+    $$$$$:   13-block 12
+call   21 never executed
+       1*:   14:    EXPECT_EQ(Double, 2.5);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   14-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   14-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   14-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   14-block  4
+call   16 never executed
+call   17 never executed
+        1:   14-block  5
+call   18 returned 1
+    $$$$$:   14-block  6
+    $$$$$:   14-block  7
+call   19 never executed
+    $$$$$:   14-block  8
+    $$$$$:   14-block  9
+call   20 never executed
+    $$$$$:   14-block 10
+    $$$$$:   14-block 11
+call   21 never executed
+       1*:   15:    EXPECT_EQ(Character, 'C');
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   15-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   15-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   15-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   15-block  4
+call   16 never executed
+call   17 never executed
+        1:   15-block  5
+call   18 returned 1
+    $$$$$:   15-block  6
+    $$$$$:   15-block  7
+call   19 never executed
+    $$$$$:   15-block  8
+    $$$$$:   15-block  9
+call   20 never executed
+    $$$$$:   15-block 10
+    $$$$$:   15-block 11
+call   21 never executed
+        1:   16:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   16-block  0
+call    3 never executed
+    $$$$$:   16-block  1
+call    4 never executed
+    $$$$$:   16-block  2
+call    5 never executed
+------------------
+        -:   17:
+        4:   18:TEST(Constructor, Move) {
+        1:   19:    AnyType I = 2.5;
+        1:   20:    AnyType C = 'c';
+        1:   21:    AnyType B = true;
+        1:   22:    AnyType TC = std::move(C);
+       1*:   23:    EXPECT_EQ(TC.Type, typeid(char));
+        2:   24:    AnyType TD = std::move(I);
+       1*:   25:    EXPECT_EQ(TD.Type, typeid(double));
+        2:   26:    AnyType TB = std::move(B);
+       1*:   27:    EXPECT_EQ(TB.Type, typeid(bool));
+        1:   28:}
+------------------
+_ZN21Constructor_Move_TestC1Ev:
+function _ZN21Constructor_Move_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   18:TEST(Constructor, Move) {
+        1:   18-block  0
+call    0 returned 1
+------------------
+_ZN21Constructor_Move_TestD0Ev:
+function _ZN21Constructor_Move_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   18:TEST(Constructor, Move) {
+        1:   18-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN21Constructor_Move_TestD1Ev:
+function _ZN21Constructor_Move_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   18:TEST(Constructor, Move) {
+        1:   18-block  0
+call    0 returned 1
+------------------
+_ZN21Constructor_Move_Test8TestBodyEv:
+function _ZN21Constructor_Move_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:   18:TEST(Constructor, Move) {
+        1:   19:    AnyType I = 2.5;
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20:    AnyType C = 'c';
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21:    AnyType B = true;
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22:    AnyType TC = std::move(C);
+        1:   22-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+       1*:   23:    EXPECT_EQ(TC.Type, typeid(char));
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   23-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   23-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   23-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   23-block  5
+call   16 never executed
+call   17 never executed
+        1:   23-block  6
+call   18 returned 1
+    $$$$$:   23-block  7
+call   19 never executed
+    $$$$$:   23-block  8
+    $$$$$:   23-block  9
+call   20 never executed
+    $$$$$:   23-block 10
+    $$$$$:   23-block 11
+call   21 never executed
+        2:   24:    AnyType TD = std::move(I);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   24-block  0
+call    5 never executed
+       1*:   25:    EXPECT_EQ(TD.Type, typeid(double));
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   25-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   25-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   25-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   25-block  5
+call   16 never executed
+call   17 never executed
+        1:   25-block  6
+call   18 returned 1
+    $$$$$:   25-block  7
+call   19 never executed
+    $$$$$:   25-block  8
+    $$$$$:   25-block  9
+call   20 never executed
+    $$$$$:   25-block 10
+    $$$$$:   25-block 11
+call   21 never executed
+        2:   26:    AnyType TB = std::move(B);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 1
+    $$$$$:   26-block  0
+call    5 never executed
+       1*:   27:    EXPECT_EQ(TB.Type, typeid(bool));
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   27-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   27-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   27-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   27-block  5
+call   16 never executed
+call   17 never executed
+        1:   27-block  6
+call   18 returned 1
+    $$$$$:   27-block  7
+call   19 never executed
+    $$$$$:   27-block  8
+    $$$$$:   27-block  9
+call   20 never executed
+    $$$$$:   27-block 10
+    $$$$$:   27-block 11
+call   21 never executed
+        1:   28:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   28-block  0
+call    4 never executed
+    $$$$$:   28-block  1
+call    5 never executed
+    $$$$$:   28-block  2
+call    6 never executed
+    $$$$$:   28-block  3
+call    7 never executed
+------------------
+        -:   29:
+        4:   30:TEST(Constructor, Copy) {
+        1:   31:    AnyType D = 2.5;
+        1:   32:    AnyType C = 'c';
+        1:   33:    AnyType B = true;
+        1:   34:    AnyType I = 2;
+        1:   35:    AnyType A = I;
+        -:   36:
+       1*:   37:    EXPECT_EQ(A.toInt(), I.toInt());
+       1*:   38:    EXPECT_NE(A.Value, I.Value);
+        2:   39:    AnyType TD = D;
+       1*:   40:    EXPECT_EQ(TD.Type, typeid(double));
+        2:   41:    AnyType TB = B;
+       1*:   42:    EXPECT_EQ(TB.Type, typeid(bool));
+        2:   43:    AnyType TC = C;
+       1*:   44:    EXPECT_EQ(TC.Type, typeid(char));
+        1:   45:}
+------------------
+_ZN21Constructor_Copy_TestC1Ev:
+function _ZN21Constructor_Copy_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST(Constructor, Copy) {
+        1:   30-block  0
+call    0 returned 1
+------------------
+_ZN21Constructor_Copy_TestD0Ev:
+function _ZN21Constructor_Copy_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST(Constructor, Copy) {
+        1:   30-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN21Constructor_Copy_TestD1Ev:
+function _ZN21Constructor_Copy_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST(Constructor, Copy) {
+        1:   30-block  0
+call    0 returned 1
+------------------
+_ZN21Constructor_Copy_Test8TestBodyEv:
+function _ZN21Constructor_Copy_Test8TestBodyEv called 1 returned 100% blocks executed 29%
+        1:   30:TEST(Constructor, Copy) {
+        1:   31:    AnyType D = 2.5;
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32:    AnyType C = 'c';
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33:    AnyType B = true;
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34:    AnyType I = 2;
+        1:   34-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35:    AnyType A = I;
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   36:
+       1*:   37:    EXPECT_EQ(A.toInt(), I.toInt());
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   37-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   37-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   37-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   37-block  5
+call   15 never executed
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   37-block  6
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:   37-block  7
+call   22 never executed
+call   23 never executed
+        1:   37-block  8
+call   24 returned 1
+    $$$$$:   37-block  9
+    $$$$$:   37-block 10
+    $$$$$:   37-block 11
+call   25 never executed
+    $$$$$:   37-block 12
+    $$$$$:   37-block 13
+call   26 never executed
+    $$$$$:   37-block 14
+    $$$$$:   37-block 15
+call   27 never executed
+       1*:   38:    EXPECT_NE(A.Value, I.Value);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   38-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   38-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   38-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   38-block  4
+call   16 never executed
+call   17 never executed
+        1:   38-block  5
+call   18 returned 1
+    $$$$$:   38-block  6
+call   19 never executed
+    $$$$$:   38-block  7
+    $$$$$:   38-block  8
+call   20 never executed
+    $$$$$:   38-block  9
+    $$$$$:   38-block 10
+call   21 never executed
+        2:   39:    AnyType TD = D;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:   39-block  0
+call    4 never executed
+       1*:   40:    EXPECT_EQ(TD.Type, typeid(double));
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   40-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   40-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   40-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   40-block  5
+call   16 never executed
+call   17 never executed
+        1:   40-block  6
+call   18 returned 1
+    $$$$$:   40-block  7
+call   19 never executed
+    $$$$$:   40-block  8
+    $$$$$:   40-block  9
+call   20 never executed
+    $$$$$:   40-block 10
+    $$$$$:   40-block 11
+call   21 never executed
+        2:   41:    AnyType TB = B;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:   41-block  0
+call    4 never executed
+       1*:   42:    EXPECT_EQ(TB.Type, typeid(bool));
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   42-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   42-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   42-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   42-block  5
+call   16 never executed
+call   17 never executed
+        1:   42-block  6
+call   18 returned 1
+    $$$$$:   42-block  7
+call   19 never executed
+    $$$$$:   42-block  8
+    $$$$$:   42-block  9
+call   20 never executed
+    $$$$$:   42-block 10
+    $$$$$:   42-block 11
+call   21 never executed
+        2:   43:    AnyType TC = C;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:   43-block  0
+call    4 never executed
+       1*:   44:    EXPECT_EQ(TC.Type, typeid(char));
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   44-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   44-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   44-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   44-block  5
+call   16 never executed
+call   17 never executed
+        1:   44-block  6
+call   18 returned 1
+    $$$$$:   44-block  7
+call   19 never executed
+    $$$$$:   44-block  8
+    $$$$$:   44-block  9
+call   20 never executed
+    $$$$$:   44-block 10
+    $$$$$:   44-block 11
+call   21 never executed
+        1:   45:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:   45-block  0
+call    5 never executed
+    $$$$$:   45-block  1
+call    6 never executed
+    $$$$$:   45-block  2
+call    7 never executed
+    $$$$$:   45-block  3
+call    8 never executed
+    $$$$$:   45-block  4
+call    9 never executed
+------------------
+        -:   46:
+        4:   47:TEST(Operator, Copy) {
+        1:   48:    AnyType I = 2;
+        1:   49:    AnyType D = 3.5;
+        1:   50:    I = D;
+        1:   51:    AnyType B;
+        1:   52:    B = true;
+        -:   53:
+       1*:   54:    EXPECT_NE(I.Value, D.Value);
+       1*:   55:    EXPECT_EQ(I.toDouble(), 3.5);
+       1*:   56:    EXPECT_EQ(I.Type, typeid(double));
+       1*:   57:    EXPECT_EQ(B.Type, typeid(bool));
+        1:   58:}
+------------------
+_ZN18Operator_Copy_TestC1Ev:
+function _ZN18Operator_Copy_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   47:TEST(Operator, Copy) {
+        1:   47-block  0
+call    0 returned 1
+------------------
+_ZN18Operator_Copy_TestD0Ev:
+function _ZN18Operator_Copy_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   47:TEST(Operator, Copy) {
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN18Operator_Copy_TestD1Ev:
+function _ZN18Operator_Copy_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   47:TEST(Operator, Copy) {
+        1:   47-block  0
+call    0 returned 1
+------------------
+_ZN18Operator_Copy_Test8TestBodyEv:
+function _ZN18Operator_Copy_Test8TestBodyEv called 1 returned 100% blocks executed 28%
+        1:   47:TEST(Operator, Copy) {
+        1:   48:    AnyType I = 2;
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49:    AnyType D = 3.5;
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50:    I = D;
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51:    AnyType B;
+        1:   51-block  0
+call    0 returned 1
+        1:   52:    B = true;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   52-block  1
+call    6 returned 1
+    $$$$$:   52-block  2
+call    7 never executed
+    $$$$$:   52-block  3
+        -:   53:
+       1*:   54:    EXPECT_NE(I.Value, D.Value);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   54-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   54-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   54-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   54-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   54-block  4
+call   16 never executed
+call   17 never executed
+        1:   54-block  5
+call   18 returned 1
+    $$$$$:   54-block  6
+call   19 never executed
+    $$$$$:   54-block  7
+    $$$$$:   54-block  8
+call   20 never executed
+    $$$$$:   54-block  9
+    $$$$$:   54-block 10
+call   21 never executed
+       1*:   55:    EXPECT_EQ(I.toDouble(), 3.5);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   55-block  1
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   55-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   55-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   55-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   55-block  5
+call   19 never executed
+call   20 never executed
+        1:   55-block  6
+call   21 returned 1
+    $$$$$:   55-block  7
+    $$$$$:   55-block  8
+    $$$$$:   55-block  9
+call   22 never executed
+    $$$$$:   55-block 10
+    $$$$$:   55-block 11
+call   23 never executed
+    $$$$$:   55-block 12
+    $$$$$:   55-block 13
+call   24 never executed
+       1*:   56:    EXPECT_EQ(I.Type, typeid(double));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   56-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   56-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   56-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   56-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   56-block  4
+call   16 never executed
+call   17 never executed
+        1:   56-block  5
+call   18 returned 1
+    $$$$$:   56-block  6
+call   19 never executed
+    $$$$$:   56-block  7
+    $$$$$:   56-block  8
+call   20 never executed
+    $$$$$:   56-block  9
+    $$$$$:   56-block 10
+call   21 never executed
+       1*:   57:    EXPECT_EQ(B.Type, typeid(bool));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   57-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   57-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   57-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   57-block  4
+call   16 never executed
+call   17 never executed
+        1:   57-block  5
+call   18 returned 1
+    $$$$$:   57-block  6
+call   19 never executed
+    $$$$$:   57-block  7
+    $$$$$:   57-block  8
+call   20 never executed
+    $$$$$:   57-block  9
+    $$$$$:   57-block 10
+call   21 never executed
+        1:   58:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   58-block  0
+call    3 never executed
+    $$$$$:   58-block  1
+call    4 never executed
+    $$$$$:   58-block  2
+call    5 never executed
+------------------
+        -:   59:
+        4:   60:TEST(Operator, CopyTypes) {
+        1:   61:    AnyType I = 2;
+        1:   62:    AnyType D = 2.5;
+        1:   63:    AnyType B = true;
+        1:   64:    AnyType C = 'c';
+        1:   65:    I = D;
+        -:   66:
+       1*:   67:    EXPECT_EQ(I.Type, typeid(double));
+        1:   68:    I = B;
+       1*:   69:    EXPECT_EQ(I.Type, typeid(bool));
+        1:   70:    I = C;
+       1*:   71:    EXPECT_EQ(I.Type, typeid(char));
+        1:   72:}
+------------------
+_ZN23Operator_CopyTypes_TestC1Ev:
+function _ZN23Operator_CopyTypes_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   60:TEST(Operator, CopyTypes) {
+        1:   60-block  0
+call    0 returned 1
+------------------
+_ZN23Operator_CopyTypes_TestD0Ev:
+function _ZN23Operator_CopyTypes_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   60:TEST(Operator, CopyTypes) {
+        1:   60-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN23Operator_CopyTypes_TestD1Ev:
+function _ZN23Operator_CopyTypes_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   60:TEST(Operator, CopyTypes) {
+        1:   60-block  0
+call    0 returned 1
+------------------
+_ZN23Operator_CopyTypes_Test8TestBodyEv:
+function _ZN23Operator_CopyTypes_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   60:TEST(Operator, CopyTypes) {
+        1:   61:    AnyType I = 2;
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   62:    AnyType D = 2.5;
+        1:   62-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   63:    AnyType B = true;
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   64:    AnyType C = 'c';
+        1:   64-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   65:    I = D;
+        1:   65-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   66:
+       1*:   67:    EXPECT_EQ(I.Type, typeid(double));
+        1:   67-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   67-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   67-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   67-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   67-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   67-block  5
+call   16 never executed
+call   17 never executed
+        1:   67-block  6
+call   18 returned 1
+    $$$$$:   67-block  7
+call   19 never executed
+    $$$$$:   67-block  8
+    $$$$$:   67-block  9
+call   20 never executed
+    $$$$$:   67-block 10
+    $$$$$:   67-block 11
+call   21 never executed
+        1:   68:    I = B;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   69:    EXPECT_EQ(I.Type, typeid(bool));
+        1:   69-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   69-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   69-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   69-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   69-block  5
+call   16 never executed
+call   17 never executed
+        1:   69-block  6
+call   18 returned 1
+    $$$$$:   69-block  7
+call   19 never executed
+    $$$$$:   69-block  8
+    $$$$$:   69-block  9
+call   20 never executed
+    $$$$$:   69-block 10
+    $$$$$:   69-block 11
+call   21 never executed
+        1:   70:    I = C;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   71:    EXPECT_EQ(I.Type, typeid(char));
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   71-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   71-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   71-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   71-block  5
+call   16 never executed
+call   17 never executed
+        1:   71-block  6
+call   18 returned 1
+    $$$$$:   71-block  7
+call   19 never executed
+    $$$$$:   71-block  8
+    $$$$$:   71-block  9
+call   20 never executed
+    $$$$$:   71-block 10
+    $$$$$:   71-block 11
+call   21 never executed
+        1:   72:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   72-block  0
+call    4 never executed
+    $$$$$:   72-block  1
+call    5 never executed
+    $$$$$:   72-block  2
+call    6 never executed
+    $$$$$:   72-block  3
+call    7 never executed
+------------------
+        -:   73:
+        4:   74:TEST(Operator, Move) {
+        1:   75:    AnyType D = 2.5;
+        1:   76:    AnyType I = 2;
+        1:   77:    I = std::move('C');
+        1:   78:    D = std::move(I);
+        -:   79:
+       1*:   80:    EXPECT_EQ(D.toChar(), 'C');
+       1*:   81:    EXPECT_EQ(I.Type, typeid(void));
+       1*:   82:    EXPECT_EQ(D.Type, typeid(char));
+        1:   83:}
+------------------
+_ZN18Operator_Move_TestC1Ev:
+function _ZN18Operator_Move_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   74:TEST(Operator, Move) {
+        1:   74-block  0
+call    0 returned 1
+------------------
+_ZN18Operator_Move_TestD0Ev:
+function _ZN18Operator_Move_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   74:TEST(Operator, Move) {
+        1:   74-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN18Operator_Move_TestD1Ev:
+function _ZN18Operator_Move_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   74:TEST(Operator, Move) {
+        1:   74-block  0
+call    0 returned 1
+------------------
+_ZN18Operator_Move_Test8TestBodyEv:
+function _ZN18Operator_Move_Test8TestBodyEv called 1 returned 100% blocks executed 30%
+        1:   74:TEST(Operator, Move) {
+        1:   75:    AnyType D = 2.5;
+        1:   75-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76:    AnyType I = 2;
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77:    I = std::move('C');
+        1:   77-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   77-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   77-block  2
+call    7 returned 1
+    $$$$$:   77-block  3
+call    8 never executed
+    $$$$$:   77-block  4
+    $$$$$:   77-block  5
+        1:   78:    D = std::move(I);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   79:
+       1*:   80:    EXPECT_EQ(D.toChar(), 'C');
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   80-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   80-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   80-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   80-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   80-block  6
+call   19 never executed
+call   20 never executed
+        1:   80-block  7
+call   21 returned 1
+    $$$$$:   80-block  8
+    $$$$$:   80-block  9
+    $$$$$:   80-block 10
+call   22 never executed
+    $$$$$:   80-block 11
+    $$$$$:   80-block 12
+call   23 never executed
+    $$$$$:   80-block 13
+    $$$$$:   80-block 14
+call   24 never executed
+       1*:   81:    EXPECT_EQ(I.Type, typeid(void));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   81-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   81-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   81-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   81-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   81-block  4
+call   16 never executed
+call   17 never executed
+        1:   81-block  5
+call   18 returned 1
+    $$$$$:   81-block  6
+call   19 never executed
+    $$$$$:   81-block  7
+    $$$$$:   81-block  8
+call   20 never executed
+    $$$$$:   81-block  9
+    $$$$$:   81-block 10
+call   21 never executed
+       1*:   82:    EXPECT_EQ(D.Type, typeid(char));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   82-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   82-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   82-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   82-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   82-block  4
+call   16 never executed
+call   17 never executed
+        1:   82-block  5
+call   18 returned 1
+    $$$$$:   82-block  6
+call   19 never executed
+    $$$$$:   82-block  7
+    $$$$$:   82-block  8
+call   20 never executed
+    $$$$$:   82-block  9
+    $$$$$:   82-block 10
+call   21 never executed
+        1:   83:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   83-block  0
+call    2 never executed
+    $$$$$:   83-block  1
+call    3 never executed
+------------------
+        -:   84:
+        4:   85:TEST(Operator, MoveTypes) {
+        1:   86:    AnyType C = 'c';
+        1:   87:    AnyType D = 2.5;
+        1:   88:    AnyType I = 3;
+        1:   89:    AnyType B = true;
+        1:   90:    AnyType V;
+        -:   91:
+        1:   92:    D = C;
+       1*:   93:    EXPECT_EQ(D.Type, typeid(char));
+        1:   94:    D = I;
+       1*:   95:    EXPECT_EQ(D.Type, typeid(int));
+        1:   96:    D = B;
+       1*:   97:    EXPECT_EQ(D.Type, typeid(bool));
+        1:   98:    D = V;
+       1*:   99:    EXPECT_EQ(D.Type, typeid(void));
+        1:  100:}
+------------------
+_ZN23Operator_MoveTypes_TestC1Ev:
+function _ZN23Operator_MoveTypes_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   85:TEST(Operator, MoveTypes) {
+        1:   85-block  0
+call    0 returned 1
+------------------
+_ZN23Operator_MoveTypes_TestD0Ev:
+function _ZN23Operator_MoveTypes_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   85:TEST(Operator, MoveTypes) {
+        1:   85-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN23Operator_MoveTypes_TestD1Ev:
+function _ZN23Operator_MoveTypes_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   85:TEST(Operator, MoveTypes) {
+        1:   85-block  0
+call    0 returned 1
+------------------
+_ZN23Operator_MoveTypes_Test8TestBodyEv:
+function _ZN23Operator_MoveTypes_Test8TestBodyEv called 1 returned 100% blocks executed 30%
+        1:   85:TEST(Operator, MoveTypes) {
+        1:   86:    AnyType C = 'c';
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   87:    AnyType D = 2.5;
+        1:   87-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   88:    AnyType I = 3;
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   89:    AnyType B = true;
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90:    AnyType V;
+        1:   90-block  0
+call    0 returned 1
+        -:   91:
+        1:   92:    D = C;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   93:    EXPECT_EQ(D.Type, typeid(char));
+        1:   93-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   93-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   93-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   93-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   93-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   93-block  5
+call   16 never executed
+call   17 never executed
+        1:   93-block  6
+call   18 returned 1
+    $$$$$:   93-block  7
+call   19 never executed
+    $$$$$:   93-block  8
+    $$$$$:   93-block  9
+call   20 never executed
+    $$$$$:   93-block 10
+    $$$$$:   93-block 11
+call   21 never executed
+        1:   94:    D = I;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   95:    EXPECT_EQ(D.Type, typeid(int));
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   95-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   95-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   95-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   95-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   95-block  5
+call   16 never executed
+call   17 never executed
+        1:   95-block  6
+call   18 returned 1
+    $$$$$:   95-block  7
+call   19 never executed
+    $$$$$:   95-block  8
+    $$$$$:   95-block  9
+call   20 never executed
+    $$$$$:   95-block 10
+    $$$$$:   95-block 11
+call   21 never executed
+        1:   96:    D = B;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   97:    EXPECT_EQ(D.Type, typeid(bool));
+        1:   97-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   97-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   97-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   97-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   97-block  5
+call   16 never executed
+call   17 never executed
+        1:   97-block  6
+call   18 returned 1
+    $$$$$:   97-block  7
+call   19 never executed
+    $$$$$:   97-block  8
+    $$$$$:   97-block  9
+call   20 never executed
+    $$$$$:   97-block 10
+    $$$$$:   97-block 11
+call   21 never executed
+        1:   98:    D = V;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   99:    EXPECT_EQ(D.Type, typeid(void));
+        1:   99-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   99-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   99-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   99-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   99-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   99-block  5
+call   16 never executed
+call   17 never executed
+        1:   99-block  6
+call   18 returned 1
+    $$$$$:   99-block  7
+call   19 never executed
+    $$$$$:   99-block  8
+    $$$$$:   99-block  9
+call   20 never executed
+    $$$$$:   99-block 10
+    $$$$$:   99-block 11
+call   21 never executed
+        1:  100:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:  100-block  0
+call    5 never executed
+    $$$$$:  100-block  1
+call    6 never executed
+    $$$$$:  100-block  2
+call    7 never executed
+    $$$$$:  100-block  3
+call    8 never executed
+    $$$$$:  100-block  4
+call    9 never executed
+------------------
+        -:  101:
+        4:  102:TEST(Method, Swap) {
+        1:  103:    AnyType D = 2.5;
+        1:  104:    AnyType I = 2;
+        1:  105:    D.swap(I);
+        -:  106:
+       1*:  107:    EXPECT_EQ(D.toInt(), 2);
+       1*:  108:    EXPECT_EQ(I.toDouble(), 2.5);
+        1:  109:}
+------------------
+_ZN16Method_Swap_TestC1Ev:
+function _ZN16Method_Swap_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  102:TEST(Method, Swap) {
+        1:  102-block  0
+call    0 returned 1
+------------------
+_ZN16Method_Swap_TestD0Ev:
+function _ZN16Method_Swap_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  102:TEST(Method, Swap) {
+        1:  102-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN16Method_Swap_TestD1Ev:
+function _ZN16Method_Swap_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  102:TEST(Method, Swap) {
+        1:  102-block  0
+call    0 returned 1
+------------------
+_ZN16Method_Swap_Test8TestBodyEv:
+function _ZN16Method_Swap_Test8TestBodyEv called 1 returned 100% blocks executed 30%
+        1:  102:TEST(Method, Swap) {
+        1:  103:    AnyType D = 2.5;
+        1:  103-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  104:    AnyType I = 2;
+        1:  104-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  105:    D.swap(I);
+        1:  105-block  0
+call    0 returned 1
+        -:  106:
+       1*:  107:    EXPECT_EQ(D.toInt(), 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  107-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  107-block  1
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  107-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  107-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  107-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  107-block  5
+call   19 never executed
+call   20 never executed
+        1:  107-block  6
+call   21 returned 1
+    $$$$$:  107-block  7
+    $$$$$:  107-block  8
+    $$$$$:  107-block  9
+call   22 never executed
+    $$$$$:  107-block 10
+    $$$$$:  107-block 11
+call   23 never executed
+    $$$$$:  107-block 12
+    $$$$$:  107-block 13
+call   24 never executed
+       1*:  108:    EXPECT_EQ(I.toDouble(), 2.5);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  108-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  108-block  1
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  108-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  108-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  108-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  108-block  5
+call   19 never executed
+call   20 never executed
+        1:  108-block  6
+call   21 returned 1
+    $$$$$:  108-block  7
+    $$$$$:  108-block  8
+    $$$$$:  108-block  9
+call   22 never executed
+    $$$$$:  108-block 10
+    $$$$$:  108-block 11
+call   23 never executed
+    $$$$$:  108-block 12
+    $$$$$:  108-block 13
+call   24 never executed
+        1:  109:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  109-block  0
+call    2 never executed
+    $$$$$:  109-block  1
+call    3 never executed
+------------------
+        -:  110:
+        4:  111:TEST(Method, Int) {
+        1:  112:    AnyType D = 2.5;
+        -:  113:
+       1*:  114:    EXPECT_THROW({
+        -:  115:        D.toInt();
+        1:  116:    }, std::bad_cast);
+        1:  117:}
+------------------
+_ZN15Method_Int_TestC1Ev:
+function _ZN15Method_Int_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  111:TEST(Method, Int) {
+        1:  111-block  0
+call    0 returned 1
+------------------
+_ZN15Method_Int_TestD0Ev:
+function _ZN15Method_Int_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  111:TEST(Method, Int) {
+        1:  111-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN15Method_Int_TestD1Ev:
+function _ZN15Method_Int_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  111:TEST(Method, Int) {
+        1:  111-block  0
+call    0 returned 1
+------------------
+_ZN15Method_Int_Test8TestBodyEv:
+function _ZN15Method_Int_Test8TestBodyEv called 1 returned 100% blocks executed 26%
+        1:  111:TEST(Method, Int) {
+        1:  112:    AnyType D = 2.5;
+        1:  112-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  113:
+       1*:  114:    EXPECT_THROW({
+        1:  114-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:  114-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  114-block  2
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  114-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+        1:  114-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  114-block  5
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  114-block  6
+    %%%%%:  114-block  7
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  114-block  8
+call   20 never executed
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  114-block  9
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:  114-block 10
+call   27 never executed
+call   28 never executed
+        1:  114-block 11
+branch 29 taken 1
+branch 30 taken 0
+branch 31 taken 0
+        1:  114-block 12
+call   32 returned 1
+call   33 returned 1
+    $$$$$:  114-block 13
+call   34 never executed
+call   35 never executed
+branch 36 never executed (fallthrough)
+branch 37 never executed (throw)
+    $$$$$:  114-block 14
+call   38 never executed
+branch 39 never executed (fallthrough)
+branch 40 never executed (throw)
+    $$$$$:  114-block 15
+call   41 never executed
+branch 42 never executed (fallthrough)
+branch 43 never executed (throw)
+    $$$$$:  114-block 16
+call   44 never executed
+call   45 never executed
+branch 46 never executed (fallthrough)
+branch 47 never executed (throw)
+    $$$$$:  114-block 17
+call   48 never executed
+call   49 never executed
+branch 50 never executed (fallthrough)
+branch 51 never executed (throw)
+    $$$$$:  114-block 18
+call   52 never executed
+branch 53 never executed (fallthrough)
+branch 54 never executed (throw)
+    $$$$$:  114-block 19
+    $$$$$:  114-block 20
+call   55 never executed
+    $$$$$:  114-block 21
+call   56 never executed
+call   57 never executed
+branch 58 never executed (fallthrough)
+branch 59 never executed (throw)
+    $$$$$:  114-block 22
+    $$$$$:  114-block 23
+call   60 never executed
+branch 61 never executed (fallthrough)
+branch 62 never executed (throw)
+    $$$$$:  114-block 24
+call   63 never executed
+    $$$$$:  114-block 25
+    $$$$$:  114-block 26
+call   64 never executed
+    $$$$$:  114-block 27
+call   65 never executed
+    $$$$$:  114-block 28
+call   66 never executed
+    $$$$$:  114-block 29
+    $$$$$:  114-block 30
+call   67 never executed
+    $$$$$:  114-block 31
+        -:  115:        D.toInt();
+        1:  116:    }, std::bad_cast);
+        1:  116-block  0
+call    0 returned 1
+    $$$$$:  116-block  1
+call    1 never executed
+        1:  117:}
+call    0 returned 1
+    $$$$$:  117-block  0
+call    1 never executed
+------------------
+        -:  118:
+        4:  119:TEST(Method, Char) {
+        1:  120:    AnyType C = 'A';
+        -:  121:
+        1:  122:    int Character = C.toChar();
+        -:  123:
+       1*:  124:    EXPECT_EQ(Character, 65);
+        1:  125:}
+------------------
+_ZN16Method_Char_TestC1Ev:
+function _ZN16Method_Char_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  119:TEST(Method, Char) {
+        1:  119-block  0
+call    0 returned 1
+------------------
+_ZN16Method_Char_TestD0Ev:
+function _ZN16Method_Char_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  119:TEST(Method, Char) {
+        1:  119-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN16Method_Char_TestD1Ev:
+function _ZN16Method_Char_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  119:TEST(Method, Char) {
+        1:  119-block  0
+call    0 returned 1
+------------------
+_ZN16Method_Char_Test8TestBodyEv:
+function _ZN16Method_Char_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:  119:TEST(Method, Char) {
+        1:  120:    AnyType C = 'A';
+        1:  120-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  121:
+        1:  122:    int Character = C.toChar();
+        1:  122-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  123:
+       1*:  124:    EXPECT_EQ(Character, 65);
+        1:  124-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  124-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  124-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  124-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  124-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  124-block  5
+call   16 never executed
+call   17 never executed
+        1:  124-block  6
+call   18 returned 1
+    $$$$$:  124-block  7
+    $$$$$:  124-block  8
+call   19 never executed
+    $$$$$:  124-block  9
+    $$$$$:  124-block 10
+call   20 never executed
+    $$$$$:  124-block 11
+    $$$$$:  124-block 12
+call   21 never executed
+        1:  125:}
+call    0 returned 1
+    $$$$$:  125-block  0
+call    1 never executed
+------------------
+        -:  126:
+        4:  127:TEST(Method, Double) {
+        1:  128:    AnyType D = 1;
+        -:  129:
+       1*:  130:    EXPECT_THROW({
+        -:  131:        D.toDouble();
+        1:  132:    }, std::bad_cast);
+        1:  133:}
+------------------
+_ZN18Method_Double_TestC1Ev:
+function _ZN18Method_Double_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  127:TEST(Method, Double) {
+        1:  127-block  0
+call    0 returned 1
+------------------
+_ZN18Method_Double_TestD0Ev:
+function _ZN18Method_Double_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  127:TEST(Method, Double) {
+        1:  127-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN18Method_Double_TestD1Ev:
+function _ZN18Method_Double_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  127:TEST(Method, Double) {
+        1:  127-block  0
+call    0 returned 1
+------------------
+_ZN18Method_Double_Test8TestBodyEv:
+function _ZN18Method_Double_Test8TestBodyEv called 1 returned 100% blocks executed 26%
+        1:  127:TEST(Method, Double) {
+        1:  128:    AnyType D = 1;
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  129:
+       1*:  130:    EXPECT_THROW({
+        1:  130-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:  130-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  130-block  2
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  130-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+        1:  130-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  130-block  5
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  130-block  6
+    %%%%%:  130-block  7
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  130-block  8
+call   20 never executed
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  130-block  9
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:  130-block 10
+call   27 never executed
+call   28 never executed
+        1:  130-block 11
+branch 29 taken 1
+branch 30 taken 0
+branch 31 taken 0
+        1:  130-block 12
+call   32 returned 1
+call   33 returned 1
+    $$$$$:  130-block 13
+call   34 never executed
+call   35 never executed
+branch 36 never executed (fallthrough)
+branch 37 never executed (throw)
+    $$$$$:  130-block 14
+call   38 never executed
+branch 39 never executed (fallthrough)
+branch 40 never executed (throw)
+    $$$$$:  130-block 15
+call   41 never executed
+branch 42 never executed (fallthrough)
+branch 43 never executed (throw)
+    $$$$$:  130-block 16
+call   44 never executed
+call   45 never executed
+branch 46 never executed (fallthrough)
+branch 47 never executed (throw)
+    $$$$$:  130-block 17
+call   48 never executed
+call   49 never executed
+branch 50 never executed (fallthrough)
+branch 51 never executed (throw)
+    $$$$$:  130-block 18
+call   52 never executed
+branch 53 never executed (fallthrough)
+branch 54 never executed (throw)
+    $$$$$:  130-block 19
+    $$$$$:  130-block 20
+call   55 never executed
+    $$$$$:  130-block 21
+call   56 never executed
+call   57 never executed
+branch 58 never executed (fallthrough)
+branch 59 never executed (throw)
+    $$$$$:  130-block 22
+    $$$$$:  130-block 23
+call   60 never executed
+branch 61 never executed (fallthrough)
+branch 62 never executed (throw)
+    $$$$$:  130-block 24
+call   63 never executed
+    $$$$$:  130-block 25
+    $$$$$:  130-block 26
+call   64 never executed
+    $$$$$:  130-block 27
+call   65 never executed
+    $$$$$:  130-block 28
+call   66 never executed
+    $$$$$:  130-block 29
+    $$$$$:  130-block 30
+call   67 never executed
+    $$$$$:  130-block 31
+        -:  131:        D.toDouble();
+        1:  132:    }, std::bad_cast);
+        1:  132-block  0
+call    0 returned 1
+    $$$$$:  132-block  1
+call    1 never executed
+        1:  133:}
+call    0 returned 1
+    $$$$$:  133-block  0
+call    1 never executed
+------------------
+        -:  134:
+        4:  135:TEST(Method, Bool) {
+        1:  136:    AnyType B = true;
+        -:  137:
+       1*:  138:    EXPECT_EQ(B.toBool(), true);
+        1:  139:}
+------------------
+_ZN16Method_Bool_TestC1Ev:
+function _ZN16Method_Bool_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  135:TEST(Method, Bool) {
+        1:  135-block  0
+call    0 returned 1
+------------------
+_ZN16Method_Bool_TestD0Ev:
+function _ZN16Method_Bool_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  135:TEST(Method, Bool) {
+        1:  135-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN16Method_Bool_TestD1Ev:
+function _ZN16Method_Bool_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  135:TEST(Method, Bool) {
+        1:  135-block  0
+call    0 returned 1
+------------------
+_ZN16Method_Bool_Test8TestBodyEv:
+function _ZN16Method_Bool_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:  135:TEST(Method, Bool) {
+        1:  136:    AnyType B = true;
+        1:  136-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  137:
+       1*:  138:    EXPECT_EQ(B.toBool(), true);
+        1:  138-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  138-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  138-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  138-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  138-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  138-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  138-block  6
+call   19 never executed
+call   20 never executed
+        1:  138-block  7
+call   21 returned 1
+    $$$$$:  138-block  8
+    $$$$$:  138-block  9
+    $$$$$:  138-block 10
+call   22 never executed
+    $$$$$:  138-block 11
+    $$$$$:  138-block 12
+call   23 never executed
+    $$$$$:  138-block 13
+    $$$$$:  138-block 14
+call   24 never executed
+        1:  139:}
+call    0 returned 1
+    $$$$$:  139-block  0
+call    1 never executed
+------------------
+        -:  140:
+        4:  141:TEST(Method, Void) {
+        1:  142:    AnyType V = 2;
+        1:  143:    AnyType I = std::move(V);
+        -:  144:
+       1*:  145:    EXPECT_EQ(V.getTypeID(), V.TypeID::VOID);
+        1:  146:}
+------------------
+_ZN16Method_Void_TestC1Ev:
+function _ZN16Method_Void_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  141:TEST(Method, Void) {
+        1:  141-block  0
+call    0 returned 1
+------------------
+_ZN16Method_Void_TestD0Ev:
+function _ZN16Method_Void_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  141:TEST(Method, Void) {
+        1:  141-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN16Method_Void_TestD1Ev:
+function _ZN16Method_Void_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  141:TEST(Method, Void) {
+        1:  141-block  0
+call    0 returned 1
+------------------
+_ZN16Method_Void_Test8TestBodyEv:
+function _ZN16Method_Void_Test8TestBodyEv called 1 returned 100% blocks executed 35%
+        1:  141:TEST(Method, Void) {
+        1:  142:    AnyType V = 2;
+        1:  142-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  143:    AnyType I = std::move(V);
+        1:  143-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:  144:
+       1*:  145:    EXPECT_EQ(V.getTypeID(), V.TypeID::VOID);
+        1:  145-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  145-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:  145-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  145-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  145-block  4
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  145-block  5
+call   17 never executed
+call   18 never executed
+        1:  145-block  6
+call   19 returned 1
+    $$$$$:  145-block  7
+    $$$$$:  145-block  8
+    $$$$$:  145-block  9
+call   20 never executed
+    $$$$$:  145-block 10
+    $$$$$:  145-block 11
+call   21 never executed
+    $$$$$:  145-block 12
+    $$$$$:  145-block 13
+call   22 never executed
+        1:  146:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  146-block  0
+call    2 never executed
+    $$$$$:  146-block  1
+call    3 never executed
+------------------

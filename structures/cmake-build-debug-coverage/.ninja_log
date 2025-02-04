@@ -1,0 +1,14 @@
+# ninja log v6
+24	419	7603678031986390	CMakeFiles/structures.dir/main.cpp.obj	40337c703429a2b4
+7880	10647	7602975254829451	lib/libgtest.a	ff509cfd3161fe06
+28	443	7603678032016391	CMakeFiles/structures.dir/AnyType.cpp.obj	bedbccd78e027a3e
+443	528	7603678036166411	structures.exe	efe782fb6979c152
+5	7879	7602975176085740	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	df2eae42f1a9e934
+9	1413	7602975176125717	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	3c4ec2613354f125
+22	1361	7603679608688505	CMakeFiles/tests.dir/test.cpp.obj	a9833d78cbed8c3
+10648	10698	7602975282505527	lib/libgtest_main.a	413f1c8401bd34dd
+1362	4070	7603679622084952	tests.exe	1fceb3658f36e30b
+17	1453	7603679956002956	CMakeFiles/tests.dir/test.cpp.obj	a9833d78cbed8c3
+1453	4154	7603679970362938	tests.exe	1fceb3658f36e30b
+21	1421	7603680098421683	CMakeFiles/tests.dir/test.cpp.obj	a9833d78cbed8c3
+1421	4222	7603680112421701	tests.exe	1fceb3658f36e30b

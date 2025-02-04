@@ -1,0 +1,68 @@
+        -:    0:Source:C:/tasks/structures/AnyType.hpp
+        -:    0:Graph:C:\tasks\structures\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcno
+        -:    0:Data:C:\tasks\structures\cmake-build-debug-coverage\CMakeFiles\tests.dir\test.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef ANYTYPE_HPP
+        -:    2:#define ANYTYPE_HPP
+        -:    3:
+        -:    4:#include <iostream>
+        -:    5:#include <typeindex>
+        -:    6:#include <stdexcept>
+        -:    7:
+        -:    8:struct AnyType {
+        -:    9:    void* Value;
+        -:   10:    std::type_index Type;
+        -:   11:
+        -:   12:    enum TypeID { VOID, INT, DOUBLE, CHAR, BOOL };
+        -:   13:
+        -:   14:    TypeID getTypeID() const;
+        -:   15:
+function _ZN7AnyTypeC1Ev called 2 returned 100% blocks executed 100%
+        2:   16:    AnyType() : Type(typeid(void)) {};
+        2:   16-block  0
+call    0 returned 2
+        -:   17:    AnyType(void* Input) = delete;
+        -:   18:    AnyType(std::nullptr_t Input) = delete;
+        -:   19:
+        -:   20:    AnyType(int Input);
+        -:   21:    AnyType(double Input);
+        -:   22:    AnyType(char Input);
+        -:   23:    AnyType(bool Input);
+        -:   24:
+        -:   25:    AnyType(const AnyType& Oth);
+        -:   26:    AnyType(AnyType&& Oth);
+        -:   27:    AnyType& operator=(const AnyType& Oth);
+        -:   28:    AnyType& operator=(AnyType&& Oth);
+        -:   29:
+        -:   30:    void swap(AnyType& Oth);
+        -:   31:    void destroy();
+        -:   32:
+        -:   33:    int toInt();
+        -:   34:    double toDouble();
+        -:   35:    char toChar();
+        -:   36:    bool toBool();
+        -:   37:
+        -:   38:    ~AnyType();
+        -:   39:
+        -:   40:    void print() {
+        -:   41:        switch (getTypeID()) {
+        -:   42:            case VOID:
+        -:   43:                std::cout << Type.name() << "\n";
+        -:   44:            break;
+        -:   45:            case INT:
+        -:   46:                std::cout << Type.name()  << " " << *(static_cast<int*>(Value)) << std::endl;
+        -:   47:            break;
+        -:   48:            case DOUBLE:
+        -:   49:                std::cout << Type.name() << " " << *(static_cast<double*>(Value)) << std::endl;
+        -:   50:            break;
+        -:   51:            case CHAR:
+        -:   52:                std::cout << Type.name() << " " << *(static_cast<char*>(Value)) << std::endl;
+        -:   53:            break;
+        -:   54:            case BOOL:
+        -:   55:                std::cout << Type.name() << " " << (*(static_cast<bool*>(Value)) ? "true" : "false") << std::endl;
+        -:   56:            break;
+        -:   57:        }
+        -:   58:    }
+        -:   59:};
+        -:   60:
+        -:   61:#endif // ANYTYPE_HPP

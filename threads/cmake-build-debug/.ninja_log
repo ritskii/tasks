@@ -1,0 +1,5 @@
+# ninja log v6
+16	252	7603733614617802	build.ninja	5f6aae9fba2977b9
+4	980	7603720334264885	CMakeFiles/threads.dir/main.cpp.obj	243daf4571b8f706
+981	1132	7603720344024906	threads.exe	5c2c3affc24cfaf2
+24	64	7603716977082350	CMakeFiles/threads.dir/testcase.cpp.obj	b53e570f6e0a66d5
